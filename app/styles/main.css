@@ -180,5 +180,31 @@ body {
     border-bottom: 0;
   }
 }
+/*radio button styles */
+input[type="radio"] {
+  display:none;
+}
+input[type="radio"] + label {
+  color: #fff;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+}
+input[type="radio"] + label span {
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-1px 4px 0 0;
+  vertical-align:middle;
+  cursor:pointer;
+  -moz-border-radius:  50%;
+  border-radius:  50%;
+}
 
+input[type="radio"] + label span {
+  border:3px solid #fff;
+}
+
+input[type="radio"]:checked + label span{
+  background-color:#fff;
+}
 
