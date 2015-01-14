@@ -1,9 +1,12 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar">
+    <div class="col-sm-2 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
         <li class="logo">
           <a href="#"><img src="../images/logo.png"/></a>
+        </li>
+        <li class="user-img">
+          <a href="#"><img src="../images/user.png" alt="img" class="img-circle"></a>
         </li>
         <li>
           <a href=""><span class="glyphicon glyphicon-th-large"></span></a>
@@ -59,19 +62,20 @@
             <button class="portrait-btn">Add a Portrait</button>
           </div>
           <div class="row">
-            Select a file: <input type="file" name="img">
+            <!--Select a file: <input type="file" name="img">-->
             <!--<input type="submit">-->
           </div>
           <hr/>
           <div class="row">
             <div class="col-sm-4 col-md-4">
               <span class="glyphicon glyphicon-user"></span>
-              <span class="basic-info-title">Basic Info</span>
+              <span class="section-title">Basic Info</span>
             </div>
             <div class="toggle-btn">
-              <span class="glyphicon glyphicon-minus" toggle-accordion></span>
+              <a href=""><span ng-class="className"  ng-click="toggleClass()" toggle-accordion></span></a>
             </div>
           </div>
+          <!-- start basic info accordion -->
           <div class="accordion">
             <div class="radio row">
               <div class="col-sm-4 col-md-4">
@@ -123,8 +127,36 @@
                 <input type="text" class="form-control" placeholder="+ Path Title"/>
               </div>
             </div>
+            <div class="row">
+              <div class="col-sm-8 col-md-8 col-sm-offset-3 path-tile-help">
+                <p>Examples: A Loving Grandmother, Mother and Wife; Activist and College Chaplain</p>
+              </div>
+            </div>
+            <div class="row">
+              <div text-angular></div>
+            </div>
           </div><!--end basic info accordion -->
         </div>
+        <hr/>
+        <!-- start joy section -->
+        <div class="container joy-section">
+          <div class="row">
+            <div class="col-sm-4 col-md-4">
+              <span><i class="fa fa-heart-o"></i></span>
+              <spn class="section-title">JOY</spn>
+            </div>
+            <div class="col-sm-1 col-md-1 col-sm-offset-5">
+              <a href=""><span ng-class="className"  ng-click="toggleClass()" toggle-accordion></span></a>
+            </div>
+          </div><!-- end row -->
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+              <h4>Share Rogger's Passions.</h4>
+            </div>
+          </div><!--end row-->
+        </div>
+        <!-- end joy section -->
+        <hr/>
       </div>
     </div>
   </div>
