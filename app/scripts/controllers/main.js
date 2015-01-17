@@ -14,13 +14,21 @@ angular.module('outpathsApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.elementClasses = {'info':'glyphicon glyphicon-plus', 'joy':'glyphicon glyphicon-plus', 'family':'glyphicon glyphicon-plus',
+                            'organization':'glyphicon glyphicon-plus'};
     $scope.className = 'glyphicon glyphicon-minus';
-    $scope.toggleClass = function(){
-      if ($scope.className === 'glyphicon glyphicon-plus'){
-        $scope.className = 'glyphicon glyphicon-minus';
+    $scope.toggleClass = function(param){
+      //if ($scope.className === 'glyphicon glyphicon-plus'){
+      //  $scope.className = 'glyphicon glyphicon-minus';
+      //}
+      //else if ($scope.className === 'glyphicon glyphicon-minus'){
+      //  $scope.className = 'glyphicon glyphicon-plus';
+      //}
+      if($scope.elementClasses[param] === 'glyphicon glyphicon-plus'){
+        $scope.elementClasses[param] = 'glyphicon glyphicon-minus';
       }
-      else if ($scope.className === 'glyphicon glyphicon-minus'){
-        $scope.className = 'glyphicon glyphicon-plus';
+      else if ($scope.elementClasses[param] === 'glyphicon glyphicon-minus'){
+        $scope.elementClasses[param] = 'glyphicon glyphicon-plus';
       }
     };
   });

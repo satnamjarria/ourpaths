@@ -208,3 +208,39 @@ input[type="radio"]:checked + label span{
   background-color:#fff;
 }
 
+.accordion{
+  display: none;
+}
+.nav-tabs{
+  border-bottom: 0 !important;
+}
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover{
+  border-radius: 6px 6px 0 0;
+  background-color: transparent !important;
+  border: 2px solid #fff !important;
+  border-bottom: 0 !important;
+  color:#fff !important;
+}
+.nav-tabs > li > a{
+  border-bottom:2px solid #fff;
+  color:#fff;
+}
+ul.nav.nav-tabs li {
+  margin-left: -4px;
+}
+.accordion{
+  margin-top:20px;
+}
+.tab-content{
+  padding-top:10px;
+}
+.input-group-addon{
+  color: #fff !important;
+  background-color: transparent !important;
+  opacity:0.5;
+}
+.tab-content input{
+  height: 40px;
+  border-left:0;
+  border-right: 0;
+}

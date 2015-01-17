@@ -10,10 +10,11 @@ angular.module('outpathsApp')
   .directive('toggleAccordion', function () {
     return {
       restrict: 'A',
-      link: function postLink(scope, element) {
+      link: function postLink(scope, element, attr) {
         //element.text('this is the toggleAccordion directive');
+        console.log(attr);
         $(element).click(function(){
-          $('.accordion').slideToggle();
+          $('.accordion.' + attr.target).slideToggle();
         });
       }
     };

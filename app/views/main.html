@@ -76,11 +76,11 @@
               <span class="section-title">Basic Info</span>
             </div>
             <div class="toggle-btn">
-              <a href=""><span ng-class="className"  ng-click="toggleClass()" toggle-accordion></span></a>
+              <a href=""><span ng-class="elementClasses['info']"  ng-click="toggleClass('info')" data-target="info" toggle-accordion></span></a>
             </div>
           </div>
           <!-- start basic info accordion -->
-          <div class="accordion">
+          <div class="accordion info">
             <div class="radio row">
               <div class="col-sm-4 col-md-4">
                 <p>Are you remembering someone male of female?</p>
@@ -145,24 +145,136 @@
         </div>
         <hr/>
         <!-- start joy section -->
-        <div class="container joy-section">
+        <div class=" joy-section">
           <div class="row">
             <div class="col-sm-4 col-md-4">
               <span><i class="fa fa-heart-o"></i></span>
               <spn class="section-title">JOY</spn>
             </div>
-            <div class="col-sm-1 col-md-1 col-sm-offset-5">
-              <a href=""><span ng-class="className"  ng-click="toggleClass()" toggle-accordion></span></a>
+            <div class=" toggle-btn">
+              <a href=""><span ng-class="elementClasses['joy']"  ng-click="toggleClass('joy')" data-target="joy" toggle-accordion></span></a>
             </div>
           </div><!-- end row -->
-          <div class="row">
-            <div class="col-sm-6 col-md-6">
-              <h4>Share Rogger's Passions.</h4>
-            </div>
-          </div><!--end row-->
+          <div class="accordion joy">
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <tabset>
+                  <tab heading="Music">
+                    <div class="tab-content">
+                      <div class="row">
+                        <div class="col-sm-4 col-md-4 form-group ">
+                          <div class="input-group">
+                            <span class="input-group-addon">+</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></span>
+                          </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">+</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></span>
+                          </div>
+                        </div>
+                      </div><!--end row -->
+                      <div class="row">
+                        <div class="col-sm-4 col-md-4 form-group ">
+                          <div class="input-group">
+                            <span class="input-group-addon">+</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></span>
+                          </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">+</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></span>
+                          </div>
+                        </div>
+                      </div><!--end row-->
+                      <div class="row">
+                        <div class="col-sm-4 col-md-4 form-group ">
+                          <div class="input-group">
+                            <span class="input-group-addon">+</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></span>
+                          </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 form-group">
+                          <div class="input-group">
+                            <span class="input-group-addon">+</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></span>
+                          </div>
+                        </div>
+                      </div><!--end row -->
+
+                    </div>
+                  </tab>
+                  <tab heading="Movies">two's content</tab>
+                  <tab heading="Shows">Shows</tab>
+                  <tab heading="Places">Places</tab>
+                  <tab heading="Hobbies">Hobbies</tab>
+                </tabset>
+              </div>
+            </div><!--end row-->
+          </div>
         </div>
         <!-- end joy section -->
         <hr/>
+        <!-- start family section -->
+        <div class="row">
+          <div class="col-sm-4 col-md-4">
+            <span class="glyphicon glyphicon-user"></span>
+            <span class="section-title">Family</span>
+          </div>
+          <div class="toggle-btn">
+            <a href=""><span ng-class="elementClasses['family']"  ng-click="toggleClass('family')" data-target="family" toggle-accordion></span></a>
+          </div>
+        </div>
+        <div class="accordion family">
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+              <tabset>
+                <tab heading="Wife">
+                  <div class="row tab-content">
+                    <div class="col-sm-4 col-md-4 form-group ">
+                      <div class="input-group">
+                        <span class="input-group-addon">+</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></span>
+                      </div>
+                    </div>
+                  </div><!--end row-->
+                </tab>
+                <tab heading="Kids"></tab>
+                <tab heading="Parents"></tab>
+                <tab heading="Aunt"></tab>
+                <tab heading="Uncles"></tab>
+                <tab heading="Grand Parents"></tab>
+                <tab heading="In Laws"></tab>
+              </tabset>
+            </div>
+          </div>
+        </div>
+        <!-- end family section -->
+        <hr/>
+        <!--start organizations section -->
+        <div class="row">
+          <div class="col-sm-4 col-md-4">
+            <span><i class="fa fa-group fa-2x"></i></span>
+            <span class="section-title">Organizations</span>
+          </div>
+          <div class="toggle-btn">
+            <a href=""><span ng-class="elementClasses['organization']"  ng-click="toggleClass('organization')" data-target="organization" toggle-accordion></span></a>
+          </div>
+        </div>
+        <div class="accordion organization">
+          organization
+        </div>
+        <hr/>
+        <!--end organizations section -->
       </div>
     </div>
   </div>
