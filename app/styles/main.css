@@ -7,9 +7,15 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background:url('../images/BG.png');
+  /*background:url('../images/BG.png');*/
   background-size: cover;
   font-family: 'Helvetica Neue';
+  /*background: rgb(143, 112, 97);*/
+  background: -moz-linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
+  background: -o-linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
+  background: -ms-linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
+  background: linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -67,8 +73,8 @@ body {
   margin-top: 28px;
 }
 .sidebar{
-  /*position: fixed;
-  top: 51px;
+  position: relative;
+  /*top: 51px;
   bottom: 0;*/
   left: 0;
   z-index: 1000;
@@ -78,6 +84,10 @@ body {
   overflow-y: auto;
   /*background-color: #f5f5f5;
   border-right: 1px solid #eee;*/
+  transition:all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
 }
 .sidebar .nav > li > a{
   background-color: transparent ;
@@ -243,4 +253,61 @@ ul.nav.nav-tabs li {
   height: 40px;
   border-left:0;
   border-right: 0;
+}
+.btn-toolbar{
+  margin-left: 8%;
+  margin-bottom:10px;
+}
+.btn-toolbar .btn-group:last-child{
+  display: none;
+}
+.toggle-sidebar{
+  display:none;
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 760px) {
+  .sidebar.hid{
+    left:-300px;
+    position: absolute;
+    transition:left 1s ease-in-out;
+    -webkit-transition: left 1s ease-in-out !important;
+    -moz-transition: left 1s ease-in-out;
+    -o-transition: left 1s ease-in-out;
+  }
+  .sidebar.visible{
+    left:0px;
+    position: absolute;
+    transition:left 1s ease-in-out;
+    -webkit-transition: left 1s ease-in-out !important;
+    -moz-transition: left 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+  }
+  .main.hid{
+    left:0px;
+    position: absolute;
+    transition:left 1s ease-in-out;
+    -webkit-transition: left 1s ease-in-out !important;
+    -moz-transition: left 1s ease-in-out;
+    -o-transition: left 1s ease-in-out;
+  }
+  .main.visible{
+    left:200px;
+    position:absolute;
+    transition:left 1s ease-in-out;
+    -webkit-transition: left 1s ease-in-out;
+    -moz-transition: left 1s ease-in-out;
+    -o-transition: left 1s ease-in-out;
+  }
+  .toggle-sidebar{
+    display: block;
+    background-color: white;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  .toggle-sidebar:hover{
+    background-color: #4eb9aa;
+  }
+  .toggle-sidebar .glyphicon{
+    color: #333;
+  }
 }

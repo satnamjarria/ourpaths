@@ -14,6 +14,8 @@ angular.module('outpathsApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.sidebarClasses = 'col-sm-2 col-md-2 sidebar';
+    $scope.sideBarToggle = true;
     $scope.elementClasses = {'info':'glyphicon glyphicon-plus', 'joy':'glyphicon glyphicon-plus', 'family':'glyphicon glyphicon-plus',
                             'organization':'glyphicon glyphicon-plus'};
     $scope.className = 'glyphicon glyphicon-minus';
@@ -30,5 +32,8 @@ angular.module('outpathsApp')
       else if ($scope.elementClasses[param] === 'glyphicon glyphicon-minus'){
         $scope.elementClasses[param] = 'glyphicon glyphicon-plus';
       }
+    };//end toggleClass
+    $scope.toggleSidebar = function(){
+      $scope.sideBarToggle = !$scope.sideBarToggle;
     };
   });

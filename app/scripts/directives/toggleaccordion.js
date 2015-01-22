@@ -14,7 +14,7 @@ angular.module('outpathsApp')
         //element.text('this is the toggleAccordion directive');
         console.log(attr);
         $(element).click(function(){
-          $('.accordion.' + attr.target).slideToggle();
+          $('.accordion.' + attr.target).toggle('slide');
         });
       }
     };
