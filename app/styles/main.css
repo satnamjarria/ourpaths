@@ -299,7 +299,7 @@ accordion .panel-body{
     padding:30px;
   }
   .main.visible{
-    left:200px;
+    left:68px;
     position:absolute;
     transition:left 1s ease-in-out;
     -webkit-transition: left 1s ease-in-out;
