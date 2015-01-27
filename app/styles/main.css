@@ -7,15 +7,13 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  /*background:url('../images/BG.png');*/
-  background-size: cover;
+  /*background:url('../images/BG.png') no-repeat;*/
   font-family: 'Helvetica Neue';
-  /*background: rgb(143, 112, 97);*/
-  background: -moz-linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
-  background: -webkit-linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
-  background: -o-linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
-  background: -ms-linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
-  background: linear-gradient(90deg, rgb(143, 112, 97) 0%, rgb(178, 159, 138) 100%);
+  background: -webkit-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
+  background: -o-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
+  background: -ms-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
+  background: -moz-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
+  background: linear-gradient(90deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -169,7 +167,7 @@ body {
 }
 
 /*joy section */
-.joy-section .fa-heart-o{
+.joy .fa-heart-o{
   font-size: 30px;
 }
 /* Responsive: Portrait tablets and up */
@@ -264,6 +262,15 @@ ul.nav.nav-tabs li {
 .toggle-sidebar{
   display:none;
 }
+accordion .panel, accordion .panel-heading{
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+accordion .panel-body{
+  border-top:0 !important;
+}
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 760px) {
   .sidebar.hid{
@@ -303,10 +310,13 @@ ul.nav.nav-tabs li {
   .toggle-btn{
     margin-top: -35px;
   }
+  i.pull-right{
+    margin-top:-35px;
+  }
   .toggle-sidebar{
     display: block;
     background-color: white;
-    border: 1px solid #ddd;
+    border: 1px solid transparent;
     outline: none;
   }
   .toggle-sidebar:hover{
@@ -315,4 +325,23 @@ ul.nav.nav-tabs li {
   .toggle-sidebar .glyphicon{
     color: #333;
   }
+  a:hover, a:focus{
+    text-decoration: none !important;
+    outline: none !important;
+  }
+
+}
+.form-control::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #fff;
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #fff;
+  opacity:  1;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #fff;
+  opacity:  1;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #fff;
 }
