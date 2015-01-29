@@ -7,13 +7,13 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  /*background:url('../images/BG.png') no-repeat;*/
+  background:url('../images/bg-blue.png') no-repeat center center fixed;
   font-family: 'Helvetica Neue';
-  background: -webkit-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
+  /*background: -webkit-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
   background: -o-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
   background: -ms-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
   background: -moz-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
-  background: linear-gradient(90deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
+  background: linear-gradient(90deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);*/
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -42,7 +42,19 @@ body {
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
-
+.marriage-btn{
+  color:#fff;
+  background-color: transparent;
+}
+.marriage-btn:hover{
+  opacity:0.8;
+  background-color: transparent;
+  color:#fff;
+}
+.marriage-btn:focus{
+  color:#fff;
+  background-color: transparent;
+}
 /* Customize container */
 @media (min-width: 768px) {
   .container {
@@ -123,16 +135,20 @@ body {
 .user-img img{
   width:22px;
 }
+.user-img {
+  background-image:url("../images/user.png");
+  background-size:cover;
+}
 .form-control:focus {
   border-color: inherit;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.form-control{
+/*.form-control{
   background-color: #bb8a6f;
   opacity: 0.5;
   color: #fff;
-}
+}*/
 .sidebar li a:hover{
   background-color:transparent;
 }
@@ -248,9 +264,9 @@ ul.nav.nav-tabs li {
   opacity:0.5;
 }
 .tab-content input{
-  height: 40px;
+  /*height: 40px;
   border-left:0;
-  border-right: 0;
+  border-right: 0;*/
 }
 .btn-toolbar{
   margin-left: 8%;

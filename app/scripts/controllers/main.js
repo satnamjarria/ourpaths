@@ -16,6 +16,8 @@ angular.module('outpathsApp')
     ];
     $scope.sidebarClasses = 'col-sm-2 col-md-2 sidebar';
     $scope.sideBarToggle = true;
+    $scope.showPrevMarriage = false;
+    $scope.marriageBt = '+ Add previous marriage if desired';
     $scope.elementClasses = {'info':'glyphicon glyphicon-plus', 'joy':'glyphicon glyphicon-plus', 'family':'glyphicon glyphicon-plus',
                             'organization':'glyphicon glyphicon-plus'};
     $scope.className = 'glyphicon glyphicon-minus';
@@ -35,5 +37,15 @@ angular.module('outpathsApp')
     };//end toggleClass
     $scope.toggleSidebar = function(){
       $scope.sideBarToggle = !$scope.sideBarToggle;
+    };
+    $scope.togglePrevMarriage = function(){
+      $scope.showPrevMarriage = !$scope.showPrevMarriage;
+      if($scope.showPrevMarriage){
+        $scope.marriageBt = 'hide previous marriage info';
+      }
+      else{
+        $scope.marriageBt = '+ Add previous marriage if desired';
+      }
+
     };
   });
