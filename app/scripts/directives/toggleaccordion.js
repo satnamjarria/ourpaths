@@ -12,9 +12,12 @@ angular.module('outpathsApp')
       restrict: 'A',
       link: function postLink(scope, element, attr) {
         //element.text('this is the toggleAccordion directive');
-        console.log(attr);
+        //console.log(attr);
         $(element).click(function(){
-          $('.accordion.' + attr.target).toggle('slide');
+          //$('.accordion.' + attr.target).toggle('slide');
+          $('#' + attr.target).click().on('change',function(){
+            $('#'+attr.desc).html('File Selected: ' + $('#'+attr.target).val());
+          });
         });
       }
     };
