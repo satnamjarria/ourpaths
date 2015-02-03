@@ -7,13 +7,14 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background:url('../images/bg-blue.png') no-repeat center center fixed;
+  min-height: 100%;
+  /*background:url('../images/bg-blue.png') no-repeat center center fixed;*/
   font-family: 'Helvetica Neue';
-  /*background: -webkit-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
-  background: -o-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
-  background: -ms-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
-  background: -moz-linear-gradient(298deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);
-  background: linear-gradient(90deg, rgb(162, 134, 120) 0%, rgb(211, 180, 158) 80%, rgb(215, 158, 129) 100%);*/
+  background: -webkit-linear-gradient(-90deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 100%);
+  background: -o-linear-gradient(298deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 100%);
+  background: -ms-linear-gradient(-90deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 100%);
+  background: -moz-linear-gradient(-90deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 100%);
+  background: linear-gradient(-90deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 100%);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
