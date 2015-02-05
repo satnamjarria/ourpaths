@@ -14,6 +14,14 @@ angular.module('outpathsApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.dropzoneConfig = {
+      url:'/upload.php',
+      parallelUploads: 3,
+      maxFileSize: 30,
+      addRemoveLinks: true,
+      autoProcessQueue:false,
+      dictDefaultMessage:'Drop images here or click here to select images.'
+    };
     $scope.sidebarClasses = 'col-sm-2 col-md-2 sidebar';
     $scope.sideBarToggle = true;
     $scope.showPrevMarriage = false;

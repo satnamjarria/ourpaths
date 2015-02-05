@@ -64,9 +64,9 @@
               <label for="private-rd"><span></span>Private</label>
             </div>
           </div>
-          <div class="row portrait-row">
+          <!--<div class="row portrait-row">
             <button class="portrait-btn" data-target="portrait-file" data-desc="portrait-file-name" toggle-accordion>Add a Portrait</button>
-          </div>
+          </div>-->
           <div class="row">
             <div class="col-sm-10 col-md-10">
               <br/>
@@ -75,6 +75,9 @@
               <!--<button toggle-accordion data-target="sample-file">Select File</button>
               <input type="submit">-->
             </div>
+            <form class="dropzone" method="post" enctype="multipart/form-data" ng-dropzone dropzone="dropzone" dropzone-config="dropzoneConfig">
+              <input name="file" type="file" multiple class="hidden"/>
+            </form>
           </div>
         </div>
           <hr/>

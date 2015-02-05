@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'textAngular',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ngDropzone'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -33,3 +34,4 @@ angular
         redirectTo: '/'
       });
   });
+
