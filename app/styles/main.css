@@ -8,17 +8,29 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   min-height: 100%;
-  background:url('../images/bg-blue.png') no-repeat center center fixed;
   font-family: 'Helvetica Neue';
+  /*background:url('../images/bg-blue.png') no-repeat center center fixed;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
   /*background: -webkit-linear-gradient(90deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 90%);
   background: -o-linear-gradient(298deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 90%);
   background: -ms-linear-gradient(90deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 90%);
   background: -moz-linear-gradient(90deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 90%);
   background: linear-gradient(90deg, rgb(107, 218, 247) 0%, rgb(107, 162, 238) 80%, rgb(96, 128, 232) 90%);*/
+  background:
+  linear-gradient(
+    90deg ,
+    rgb(107, 218, 247) 0%,
+    rgb(107, 162, 238) 80%,
+    rgb(96, 128, 232) 100%
+  ),
+  linear-gradient(
+    90deg ,
+    #6BDAF7 37.75%,
+    #6080E8 37%
+  );
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
