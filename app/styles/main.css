@@ -308,7 +308,9 @@ accordion .panel-body{
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 760px) {
-
+  .main{
+    left:0;
+  }
   .sidebar.hid{
     left:-300px;
     position: fixed;
@@ -335,12 +337,13 @@ accordion .panel-body{
     padding:30px;
   }
   .main.visible{
-    left:75px;
+    /*left:75px;*/
     transition:left 0.2s ease-in-out;
     /*-webkit-transition: left 1s ease-in-out;
     -moz-transition: left 1s ease-in-out;
     -o-transition: left 1s ease-in-out;*/
     padding:30px;
+    opacity:0.2;
   }
   .toggle-btn{
     margin-top: -35px;
@@ -405,3 +408,48 @@ accordion .panel-body{
 .dropzone.dz-started .dz-message{
   display: block !important;
 }
+/*dashboard style */
+.path-image{
+  background-size: cover !important;
+  height: 160px;
+  width:120px;
+}
+.image-wrapper{
+  padding: 8px;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 140px;
+}
+.thumbnail-wrapper{
+  width: 140px;
+  text-align: center;
+}
+.thumbnail-wrapper p:first-of-type{
+  margin-top:5px;
+  margin-bottom: 0px;
+}
+.thumbnail-wrapper p.desc{
+  margin-top:0 !important;
+}
+.thumb{
+  float:left;
+}
+.dash-info{
+  text-align:center;
+}
+.dash-info h4{
+  float:left;
+}
+.dash-left{
+  float:left;
+}
+.dash-right{
+  float: right;
+}
+/*.visible .row h5{
+  font-size:12px;
+  transition:.2s;
+}
+.row h5{
+  transition:.2s;
+}*/

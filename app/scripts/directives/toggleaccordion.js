@@ -2,14 +2,18 @@
 /*global $:false */
 /**
  * @ngdoc directive
- * @name outpathsApp.directive:toggleAccordion
+ * @name outpathsApp.directive:pathThumbnail
  * @description
- * # toggleAccordion
+ * # pathThumbnail
  */
 angular.module('outpathsApp')
-  .directive('toggleAccordion', function () {
+  .directive('pathThumbnail', function () {
     return {
-      restrict: 'A',
+      restrict: 'E',
+      templateUrl:'../../components/templates/imageDirective.html',
+      scope:{
+        img_info:'=info'
+      },
       link: function postLink(scope, element, attr) {
         //element.text('this is the toggleAccordion directive');
         //console.log(attr);
