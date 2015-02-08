@@ -14,6 +14,9 @@ angular.module('outpathsApp')
     $scope.toggleSidebar = function(){
       $scope.sideBarToggle = !$scope.sideBarToggle;
     };
+    $scope.hideSidebar = function(){
+      $scope.sideBarToggle = true;
+    };
     $scope.responseJson = {
       dashInfo:{
         paths:3,

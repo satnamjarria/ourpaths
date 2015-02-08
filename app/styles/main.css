@@ -165,6 +165,7 @@ body {
   background-color: transparent;
   opacity: 0.7;
   color: #fff;
+  border-color:#fff;
 }
 .sidebar li a:hover{
   background-color:transparent;
@@ -177,7 +178,7 @@ body {
 .main{
   color: #fff;
   left:15%;
-  position:absolute;
+  /*position:absolute;*/
 }
 .main .heading, .portrait-row{
   text-align:center;
@@ -311,6 +312,10 @@ accordion .panel-body{
   .main{
     left:0;
   }
+  /* fix tabs on mobile */
+  ul.nav-tabs li:nth-child(4){
+    margin-bottom: 0;
+  }
   .sidebar.hid{
     left:-300px;
     position: fixed;
@@ -343,7 +348,7 @@ accordion .panel-body{
     -moz-transition: left 1s ease-in-out;
     -o-transition: left 1s ease-in-out;*/
     padding:30px;
-    opacity:0.2;
+    opacity:0.1;
   }
   .toggle-btn{
     margin-top: -35px;

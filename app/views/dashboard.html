@@ -2,7 +2,7 @@
   <button ng-class="{'toggle-sidebar fix':!sideBarToggle, 'toggle-sidebar':sideBarToggle} " ng-click="toggleSidebar()"><span class="glyphicon glyphicon-align-justify"></span></button>
   <div class="row">
     <div ng-include="'components/sidebar/sidebar.html'"></div>
-    <div ng-class="{'col-md-9 col-sm-9  main hid':sideBarToggle, 'col-md-9 col-sm-9  main visible':!sideBarToggle}">
+    <div ng-class="{'col-md-9 col-sm-9  main hid':sideBarToggle, 'col-md-9 col-sm-9  main visible':!sideBarToggle}" ng-click="hideSidebar()">
       <div class="row">
         <div class="heading">
           <h1>Your Dashboard</h1>
