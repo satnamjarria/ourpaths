@@ -20,6 +20,8 @@ angular.module('outpathsApp')
       maxFileSize: 30,
       addRemoveLinks: true,
       autoProcessQueue:false,
+      thumbnailWidth:170,
+      thumbnailHeight:170,
       dictDefaultMessage:'Drop images here or click here to select images.'
     };
     $scope.sidebarClasses = 'col-sm-2 col-md-2 sidebar';
