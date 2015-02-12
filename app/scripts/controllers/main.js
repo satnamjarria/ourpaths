@@ -14,6 +14,7 @@ angular.module('outpathsApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.isCollapsed = true;
     $scope.user = '';
     $scope.password = '';
     $scope.authUser = function(){
