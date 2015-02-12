@@ -8,7 +8,8 @@
  * Controller of the outpathsApp
  */
 angular.module('outpathsApp')
-  .controller('DashboardCtrl', function ($scope) {
+  .controller('DashboardCtrl', function ($scope, $rootScope) {
+    $rootScope.bodyClass = 'create-page';
     $scope.activeSideItem = 2;
     //set response json
 

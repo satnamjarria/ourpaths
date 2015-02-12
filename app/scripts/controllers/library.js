@@ -8,7 +8,8 @@
  * Controller of the outpathsApp
  */
 angular.module('outpathsApp')
-  .controller('LibraryCtrl', function ($scope) {
+  .controller('LibraryCtrl', function ($scope, $rootScope) {
+    $rootScope.bodyClass = 'create-page';
     $scope.activeSideItem = 4;
     $scope.sideBarToggle = true;
     $scope.toggleSidebar = function(){

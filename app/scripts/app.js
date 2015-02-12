@@ -38,6 +38,10 @@ angular
         templateUrl: 'views/library.html',
         controller: 'LibraryCtrl'
       })
+      .when('/path', {
+        templateUrl: 'views/path.html',
+        controller: 'PathCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
