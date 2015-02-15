@@ -156,6 +156,15 @@ body {
   background-image:url("../images/user.png");
   background-size:cover;
 }
+.hands-icon{
+  background-image:url("../images/hands.png");
+  background-size:cover;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 12px;
+  top: 5px;
+}
 .form-control:focus {
   border-color: inherit;
   -webkit-box-shadow: none;

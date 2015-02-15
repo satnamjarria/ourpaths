@@ -42,6 +42,10 @@ angular
         templateUrl: 'views/path.html',
         controller: 'PathCtrl'
       })
+      .when('/healing', {
+        templateUrl: 'views/healing.html',
+        controller: 'HealingCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

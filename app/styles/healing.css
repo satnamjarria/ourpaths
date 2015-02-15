@@ -1,0 +1,57 @@
+.healing-page{
+  background: url('../images/green-rock.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #b1de53;
+}
+.hands-circle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hands-circle img{
+  height: 50%;
+  margin-top:20px;
+}
+.bold{
+  font-weight: bold;
+}
+.healing-ul li{
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+}
+.healing-ul li:first-child{
+  background-color:#a8bd72;
+}
+.healing-ul li a{
+  text-decoration: none;
+  color:#fff;
+}
+.heal-circle{
+  width:100px;
+  height: 100px;
+  border-radius:50%;
+  background-size: 100px 100px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.heal-circle:before{
+  content: '"';
+  font-size: 110px;
+  margin-left: -90px;
+  margin-top: -30px;
+  position: absolute;
+  transform: rotate(20deg);
+  font-family: monospace;
+}
+.quote-div p{
+  letter-spacing: 1px !important;
+  text-align:center !important;
+}
+
