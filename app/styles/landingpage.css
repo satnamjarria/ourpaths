@@ -153,7 +153,7 @@ body {
   width:22px;
 }
 .user-img {
-  background-image:url("../images/user.png");
+  background-image:url("../images/clay.jpg");
   background-size:cover;
 }
 .hands-icon{
@@ -267,12 +267,21 @@ input[type="radio"]:checked + label span{
 .nav-tabs{
   border-bottom: 0 !important;
 }
-.nav-tabs > li.active > a, .nav-tabs > li > a:hover{
+.nav-tabs > li.active > a{
   border-radius: 6px 6px 0 0;
   background-color: transparent !important;
   border: 2px solid #fff !important;
   border-bottom: 0 !important;
   color:#fff !important;
+}
+.nav-tabs > li.active > a:hover{
+  border-bottom: 0 !important;
+}
+.nav-tabs > li > a:hover{
+  border:0;
+  background-color: transparent !important;
+  border-bottom: 2px solid #fff !important;
+  margin-top:1px;
 }
 .nav-tabs > li > a{
   border-bottom:2px solid #fff;
@@ -465,7 +474,7 @@ form.dropzone.dz-started{
 /*dashboard style */
 .path-image{
   background-size: cover !important;
-  height: 160px;
+  height: 120px;
   width:120px;
 }
 .image-wrapper{
@@ -499,6 +508,9 @@ form.dropzone.dz-started{
 }
 .dash-right{
   float: right;
+}
+.content-center{
+  text-align:center;
 }
 /*.visible .row h5{
   font-size:12px;

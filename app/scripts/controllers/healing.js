@@ -21,7 +21,7 @@ angular.module('outpathsApp')
       'Donate',
       'Volunteer',
       'Gifts'
-    ]
+    ];
     $rootScope.bodyClass = 'healing-page';
     $scope.sideBarToggle = true;
     $scope.activeSideItem = 6;

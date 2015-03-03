@@ -15,19 +15,17 @@ angular.module('outpathsApp')
 
     $scope.responseJson = {
       dashInfo:{
+        recents:2,
+        favorites:3,
+        signatures:1234,
+        popular:6,
         paths:3,
         guestbooks:3,
         friends: 1256,
         guestbookMembers: 400
       },
-      activePaths:{
+      popularPaths:{
         numActive:1,
-        image:'../images/john-waters.jpg',
-        title:'JOHN WATERS',
-        desc:'1955-1999'
-      },
-      recentPaths:{
-        numPaths: 4,
         paths:[
           {
             image:'../images/miles.jpg',
@@ -46,6 +44,37 @@ angular.module('outpathsApp')
           },
           {
             image:'../images/john-waters.jpg',
+            title:'JOHN WATERS',
+            desc:'1955-1999'
+          },
+          {
+            image:'../images/joan-rivers.jpg',
+            title:'Joan Rivers',
+            desc:'1955-1999'
+          },
+          {
+            image:'../images/robin-williams.jpg',
+            title:'Robin Williams',
+            desc:'1955-1999'
+          },
+          {
+            image:'../images/carl.jpg',
+            title:'Carl Sagan',
+            desc:'1955-1999'
+          }
+        ]
+
+      },
+      recentPaths:{
+        numPaths: 2,
+        paths:[
+          {
+            image:'../images/carl.jpg',
+            title:'Carl Sagan',
+            desc:'1955-1999'
+          },
+          {
+            image:'../images/john-waters.jpg',
             title:'John Waters',
             desc:'1955-1999'
           }
@@ -53,11 +82,23 @@ angular.module('outpathsApp')
       },
       favPaths:{
         numPaths:1,
-        details:{
-          image:'../images/s-dali.jpg',
-          title:'Salvador Dali',
-          desc:'1955-1999'
-        }
+        paths: [
+          {
+          image: '../images/elizabeth.jpg',
+          title: 'Elizabeth Hill',
+          desc: '1955-1999'
+        },
+        {
+          image: '../images/andrew.jpg',
+          title: 'Andrew Simon',
+          desc: '1955-1999'
+        },
+          {
+            image: '../images/peter.jpg',
+            title: 'Peter Stewart',
+            desc: '1955-1999'
+          }
+          ]
       }
 
     };

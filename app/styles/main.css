@@ -67,7 +67,7 @@
   padding: 10px;
   color: #fff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 .landing-bt:hover, .signin-bt:hover, .signin-bt:focus{
   text-decoration: none;
@@ -179,6 +179,12 @@
 }
 .modal-backdrop.in{
   height: 2100px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+  color:#fff !important;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+  color:#fff !important;
 }
 @media (min-width: 768px) {
   .landing-page:before {

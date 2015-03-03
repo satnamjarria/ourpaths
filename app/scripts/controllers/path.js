@@ -16,6 +16,7 @@ angular.module('outpathsApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.formData = {};
     $scope.dropzoneConfig = {
       url:'/upload.php',
       parallelUploads: 3,
@@ -63,4 +64,11 @@ angular.module('outpathsApp')
       }
 
     };
+    $scope.readMethod = "readAsDataURL";
+    $scope.onReaded = function( e, file , param){
+      $scope[param] = e.target.result;
+      //$scope.img = e.target.result;
+      $scope.file = file;
+    };
+
   });
