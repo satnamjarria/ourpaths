@@ -13,7 +13,7 @@
           should have to grieve alone.
         </p>
         <div class="row marketing">
-          <div class="radio row">
+          <!--<div class="radio row">
             <div class="col-sm-4 col-md-4">
               <p>Is this foot print for an individual or a group? </p>
             </div>
@@ -25,7 +25,7 @@
               <input type="radio" name="indi-group" id="group-rd">
               <label for="group-rd"><span></span>Group</label>
             </div>
-          </div>
+          </div>-->
           <div class="radio row">
             <div class="col-sm-4 col-md-4">
               <p>Is this path public or private? </p>
@@ -58,6 +58,34 @@
         <hr/>
         <!--start accordions -->
         <accordion close-others="false">
+
+          <!-- image gallery accordion -->
+         <!-- <accordion-group is-open="status.galleryOpen">
+            <accordion-heading>
+              <div class="row">
+                <div class="col-sm-4 col-md-4">
+                  <span class="glyphicon glyphicon-picture"></span>
+                  <span class="section-title">Image Gallery</span>
+                </div>
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-minus': status.galleryOpen, 'glyphicon-plus': !status.galleryOpen}"></i>
+
+              </div><
+            </accordion-heading>
+            <div class="row dropzone-row">
+              <div class="col-sm-10 col-md-10">
+                <br/>
+                <input type="file" class="hidden" id="portrait-file" name="img">
+                <div id="portrait-file-name"></div>
+
+              </div>
+              <form class="dropzone" method="post" enctype="multipart/form-data" ng-dropzone dropzone="dropzone" dropzone-config="dropzoneConfig">
+                <input name="file" type="file" multiple class="hidden"/>
+              </form>
+            </div>
+          </accordion-group>
+          <hr/>-->
+
+          <!-- end image gallery accordion -->
           <!--basic info accordion start -->
           <accordion-group is-open="status.infoOpen">
             <accordion-heading>
@@ -147,7 +175,7 @@
             <accordion-heading>
               <div class="row">
                 <div class="col-sm-4 col-md-4">
-                  <span class="glyphicon glyphicon-user"></span>
+                  <span class="glyphicon glyphicon-family"></span>
                   <span class="section-title">Family</span>
                 </div>
                 <i class="pull-right glyphicon" ng-class="{'glyphicon-minus': status.familyOpen, 'glyphicon-plus': !status.familyOpen}"></i>
@@ -162,26 +190,22 @@
                         <div class="col-sm-8 col-md-8 form-group ">
                           <form class="form-horizontal">
                             <div class="form-group">
-                              <label for="" class="col-sm-4 control-label">Spouse or partner name:</label>
-                              <div class="col-sm-6">
+                              <div class="col-sm-8 col-md-8">
                                 <input type="text" class="form-control" id="" placeholder="spouse or partner name"/>
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="" class="col-sm-4 control-label">Ceremony Date:</label>
-                              <div class="col-sm-6">
+                              <div class="col-sm-8 col-md-8">
                                 <input type="date" class="form-control" id="" placeholder="ceremony date"/>
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="" class="col-sm-4 control-label">Ceremony Place:</label>
-                              <div class="col-sm-6">
+                              <div class="col-sm-8 col-md-8">
                                 <input type="text" class="form-control" id="" placeholder="ceremony place"/>
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="" class="col-sm-4 control-label">Ceremoy or Wedding Photo:</label>
-                              <div class="col-sm-6">
+                              <div class="col-sm-8 col-md-8">
                                 <!--<input type="file" class="form-control" id="hi" ng-model="formData.weddingImg" custom-on-change="showThumbnail" />-->
                                 <!--<img src="{{weddingImg}}" id="wedding-img"/>-->
                                 <div class="wedding-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'weddingImg' )" read-method="readMethod"  multiple>
@@ -199,26 +223,22 @@
                           <form class="form-horizontal" ng-show="showPrevMarriage">
                             <h3>Previous Marriage Info</h3>
                             <div class="form-group">
-                              <label for="" class="col-sm-4 control-label">Spouse or partner name:</label>
-                              <div class="col-sm-6">
+                              <div class="col-sm-8 col-md-8">
                                 <input type="text" class="form-control" id="" placeholder="spouse or partner name" />
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="" class="col-sm-4 control-label">Ceremony Date:</label>
-                              <div class="col-sm-6">
+                              <div class="col-sm-8 col-md-8">
                                 <input type="date" class="form-control" id="" placeholder="ceremony date"/>
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="" class="col-sm-4 control-label">Ceremony Place:</label>
-                              <div class="col-sm-6">
+                              <div class="col-sm-8 col-md-8">
                                 <input type="text" class="form-control" id="" placeholder="ceremony place"/>
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="" class="col-sm-4 control-label">Ceremoy or Wedding Photo:</label>
-                              <div class="col-sm-6">
+                              <div class="col-sm-8 col-md-8">
                                 <input type="file" class="form-control" id="" placeholder="" />
                               </div>
                             </div>
@@ -231,119 +251,73 @@
                     <tab heading="Children">
                       <div class="row tab-content">
                         <div class="col-sm-8 col-md-8 ">
-                          <form class="form-horizontal">
-                            <div class="form-group">
-                              <label for="" class="col-sm-3 control-label">Child's name:</label>
-                              <div class="col-sm-6">
-                                <input type="text" class="form-control" id="" placeholder="child's name"/>
+                          <div ng-repeat="child in children">
+                            <form class="form-horizontal">
+                              <div class="form-group">
+                                <div class="col-sm-8 col-md-8">
+                                  <input type="text" class="form-control" id="" placeholder="child's name"/>
+                                </div>
                               </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="" class="col-sm-3 control-label">Birthdate:</label>
-                              <div class="col-sm-6">
-                                <input type="date" class="form-control" id="" placeholder=""/>
+                              <div class="form-group">
+                                <div class="col-sm-8 col-md-8">
+                                  <input type="date" class="form-control" id="" placeholder=""/>
+                                </div>
                               </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="" class="col-sm-3 control-label">Birthplace:</label>
-                              <div class="col-sm-6">
-                                <input type="text" class="form-control" id="" placeholder="birthplace"/>
+                              <div class="form-group">
+                                <div class="col-sm-8 col-md-8">
+                                  <input type="text" class="form-control" id="" placeholder="birthplace"/>
+                                </div>
                               </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="" class="col-sm-3 control-label">Child's Photo:</label>
-                              <div class="col-sm-6">
-                                <!--<input type="file" class="form-control" id="" placeholder=""/>-->
-                                <!--<a class="btn-primary btn-default btn form-control" onclick="$('.child-file-reader input').click();">Select image</a>-->
-                                <div class="child-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'childImg' )" read-method="readMethod"  multiple>
+                              <div class="form-group">
+                                <div class="col-sm-8 col-md-8">
+                                  <!--<input type="file" class="form-control" id="" placeholder=""/>-->
+                                  <!--<a class="btn-primary btn-default btn form-control" onclick="$('.child-file-reader input').click();">Select image</a>-->
+                                  <div class="child-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'childImg' )" read-method="readMethod"  multiple>
 
-                                </div>
-                                <br/><br/>
-                                <div class="img-div">
-                                  <img ng-src="{{childImg}}" height="100" width="100">
-                                  <a class="btn" onclick="$('.child-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                                  </div>
+                                  <br/><br/>
+                                  <div class="img-div">
+                                    <img ng-src="{{childImg}}" height="100" width="100">
+                                    <a class="btn" onclick="$('.child-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          </form>
+                            </form>
+                          </div>
+                          <button class="btn-default btn marriage-btn" ng-click="addChild()">+ Add Another Child</button>
                         </div>
                       </div><!--end row-->
                     </tab>
                     <tab heading="Parents">
                       <div class="row tab-content">
-                        <div class="col-sm-4 col-md-4 form-group ">
-                          <!--<div class="input-group">
-                            <span class="input-group-addon">+</span>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-camera"></span></span>
-                          </div>-->
-                            <!--<input type="file" class="form-control" id="hi" ng-model="formData.weddingImg" custom-on-change="showThumbnail" />-->
-                            <!--<img src="{{weddingImg}}" id="wedding-img"/>-->
-                            <div class="parents-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'parentImg' )" read-method="readMethod"  multiple>
-
+                        <div class="col-sm-8 col-md-8">
+                          <form class="form-horizontal">
+                            <div class="form-group">
+                              <div class="col-sm-8 col-md-8">
+                                <input type="text" class="form-control" id="" placeholder="mother's full name"/>
+                              </div>
                             </div>
-                            <br/><br/>
-                            <div class="img-div">
-                              <img ng-src="{{parentImg}}" height="100" width="100">
-                              <a class="btn" onclick="$('.parents-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
-                          </div>
-                        </div>
-                      </div><!--end row-->
-                    </tab>
-                    <tab heading="Aunt">
-                      <div class="row tab-content">
-                        <div class="col-sm-6">
-                          <div class="aunt-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'auntImg' )" read-method="readMethod"  multiple>
+                            <div class="form-group">
+                              <div class="col-sm-8 col-md-8">
+                                <input type="text" class="form-control" id="" placeholder="father's full name"/>
+                              </div>
+                            </div>
+                            <div class="form-group ">
+                              <div class="col-sm-8 col-md-8">
+                                <div class="parents-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'parentImg' )" read-method="readMethod"  multiple>
 
-                          </div>
-                          <br/><br/>
-                          <div class="img-div">
-                            <img ng-src="{{auntImg}}" height="100" width="100">
-                            <a class="btn" onclick="$('.aunt-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
-                          </div>
+                                </div>
+                                <br/><br/>
+                                <div class="img-div">
+                                  <img ng-src="{{parentImg}}" height="100" width="100">
+                                  <a class="btn" onclick="$('.parents-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
                         </div>
-                      </div><!--end row-->
-                    </tab>
-                    <tab heading="Uncles">
-                      <div class="row tab-content">
-                        <div class="col-sm-6">
-                          <div class="uncle-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'uncleImg' )" read-method="readMethod"  multiple>
 
-                          </div>
-                          <br/><br/>
-                          <div class="img-div">
-                            <img ng-src="{{uncleImg}}" height="100" width="100">
-                            <a class="btn" onclick="$('.uncle-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
-                          </div>
-                        </div>
-                      </div><!--end row-->
-                    </tab>
-                    <tab heading="Grandparents">
-                      <div class="row tab-content">
-                        <div class="col-sm-6">
-                          <div class="grandparents-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'grandparentsImg' )" read-method="readMethod"  multiple>
 
-                          </div>
-                          <br/><br/>
-                          <div class="img-div">
-                            <img ng-src="{{grandparentsImg}}" height="100" width="100">
-                            <a class="btn" onclick="$('.grandparents-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
-                          </div>
-                        </div>
-                      </div><!--end row-->
-                    </tab>
-                    <tab heading="In Laws">
-                      <div class="row tab-content">
-                        <div class="col-sm-6">
-                          <div class="inLaws-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'inLawsImg' )" read-method="readMethod"  multiple>
-
-                          </div>
-                          <br/><br/>
-                          <div class="img-div">
-                            <img ng-src="{{inLawsImg}}" height="100" width="100">
-                            <a class="btn" onclick="$('.inLaws-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
-                          </div>
-                        </div>
                       </div><!--end row-->
                     </tab>
                   </tabset>
@@ -600,118 +574,426 @@
                   <form class="form-horizontal">
                     <div class="form-group">
                       <!--<label for="" class="col-sm-2 control-label">Best Trip Ever:</label>-->
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <textarea class="form-control" id="" placeholder="Best Trip Description"></textarea>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{tripImg}}" ng-class="{'hidden': !showPic, '':showPic}" height="25" width="25">
+                        <a class="btn" onclick="$('.trip-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                      </div>
                     </div>
                     <div class="form-group">
                       <div class="trip-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'tripImg' )" read-method="readMethod"  multiple>
 
                       </div>
-                      <div class="img-div">
-                        <img ng-src="{{tripImg}}" height="100" width="100">
-                        <a class="btn" onclick="$('.trip-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
+                        <input type="text" class="form-control" id="" placeholder="Greatest Achievement"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{greatachvImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.greatachv-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="greatachv-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'greatachvImg' )" read-method="readMethod"  multiple>
+
+                        </div>
                       </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="" placeholder="Greatest Achievement"/>
-                    </div>
-                    <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Greatest joy"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{greatJoyImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.greatJoy-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="greatJoy-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'greatJoyImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Greatest passion"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{greatPassionImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.greatPassion-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="greatPassion-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'greatPassionImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Greatest lesson"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{greatLessionImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.greatLession-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="greatLession-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'greatLessionImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Happiest when"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{happiestImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.happiest-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="happiest-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'happiestImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite saying or motto"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favSayingImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favSaying-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favSaying-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favSayingImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite place on earth"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favPlaceImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favPlace-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favPlace-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favPlaceImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite thing to do"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favThingImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favThing-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favThing-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favThingImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Hobbies"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{hobbiesImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.hobbies-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="hobbies-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'hobbiesImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Pastimes"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{pastimesImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.pastimes-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="pastimes-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'pastimesImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Passions"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{passionsImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.passions-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="passions-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'passionsImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Causes"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{causesImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.causes-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="causes-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'causesImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Charities"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{charitiesImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.charities-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="charities-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'charitiesImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Sports"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{sportsImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.sports-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="sports-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'sportsImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Sports awards"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                       <img ng-src="{{sprotsAwrdsImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.sportsAwrds-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="sportsAwrds-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'sportsAwrdsImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Proudest moments"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{proudestImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.proudest-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="proudest-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'proudestImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite musician"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favMusicianImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favMusician-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favMusician-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favMusicianImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite book"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favBookImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favBook-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favBook-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favBookImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite quote"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favQuoteImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favQuote-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favQuote-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favQuoteImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite prayer"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favPrayerImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favPrayer-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favPrayer-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favPrayerImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite tv show"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favShowImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favShow-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favShow-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favShowImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite sports/events"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favSportsImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favSports-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favSports-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favSportsImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite sports teams"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favTeamsImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favTeams-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favTeams-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favTeamsImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite fictional character"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favCharacterImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favCharacter-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favCharacter-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favCharacterImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite joke"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favJokeImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favJoke-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favJoke-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favJokeImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite cartoon"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favCartoonImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favCartoon-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favCartoon-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favCartoonImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Greatest sports memory"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{grtSportsMemoryImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.grtSportsMemory-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="grtSportsMemory-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'grtSportsMemoryImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Most admired historical figure"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{histFigureImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.histFigure-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="histFigure-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'histFigureImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Things grandchildren should know"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{thingsToKnowImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.thingsToKnow-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="thingsToKnow-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'thingsToKnowImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Creations"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{creationsImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.creations-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="creations-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'creationsImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite song"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favSongImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favSong-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favSong-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favSongImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite artist"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favArtistImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favArtist-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favArtist-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favArtistImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite game"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favGameImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favGame-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favGame-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favGameImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
+                      <div class="col-xs-8 col-sm-8 col-md-8">
                         <input type="text" class="form-control" id="" placeholder="Favorite movie"/>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 camera-icon-div">
+                        <img ng-src="{{favMovieImg}}" height="25" width="25">
+                        <a class="btn" onclick="$('.favMovie-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                        <div class="favMovie-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'favMovieImg' )" read-method="readMethod"  multiple>
+
+                        </div>
+                      </div>
                     </div>
                   </form>
                 </div>

@@ -12,10 +12,14 @@
   padding-bottom: 0 !important;
 }
 .landing-container{
-  height: 2900px;
+  height: 3100px;
   overflow:hidden;
 }
 .landing-img{
+}
+.tagline{
+  font-size: 50px;
+  letter-spacing: 2px;
 }
 .landing-page:before {
   content: '';
@@ -38,8 +42,9 @@
 .navbar-default .navbar-nav > li > a {
   color: #fff;
 }
-.navbar-default .navbar-nav > li > a.active {
+.navbar-default .navbar-nav > li > a:hover {
   border:1px solid #fff;
+  padding:14px;
 }
 
 .navbar-default .navbar-brand {
@@ -50,14 +55,14 @@
   content: '';
   position: absolute;
   background-image: url('../images/logo.png');
-  height: 23px;
-  width: 35px;
-  top: 12px;
+  height: 33px;
+  width: 50px;
+  top: 6px;
   left: -10px;
   background-size: cover;
 }
 .content-start{
-  margin-top:40%;
+  margin-top:25%;
   color:#fff;
   font-weight: bold;
   text-align: center;
@@ -80,6 +85,8 @@
 .centered-p{
   padding-left: 10%;
   padding-right: 10%;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 .div-circle{
   width: 300px;
@@ -186,21 +193,34 @@
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
   color:#fff !important;
 }
+.navbar-default .navbar-brand{
+  margin-left: 15px !important;
+  font-size: 20px !important;
+  font-weight: bold;
+}
+.navbar ul li a {
+  font-size: 18px;
+  font-weight: bold;
+}
 @media (min-width: 768px) {
   .landing-page:before {
-    height:3000px;
+    height:3200px;
+  }
+  .centered-p {
+    padding-left: 25%;
+    padding-right: 25%;
   }
 }
 
 @media (max-width: 480px){
   .landing-page:before{
-    height: 3300px;
+    height: 3800px;
   }
   .landing-container{
-    height: 3200px;
+    height: 3700px;
     overflow:hidden;
   }
   .navbar-default .navbar-brand{
-    margin-left: 15px !important;
+    margin-left: 30px !important;
   }
 }

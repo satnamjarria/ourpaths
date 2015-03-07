@@ -40,6 +40,10 @@ angular.module('outpathsApp')
         size:size
       });
     };
+    $scope.scrollTo = function(hash){
+      console.log('in scrollto');
+      $location.hash(hash);
+    };
     $scope.landingPage = true;
     $rootScope.bodyClass = 'landing-page';
   });

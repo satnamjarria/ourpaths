@@ -19,7 +19,8 @@ angular
     'textAngular',
     'ui.bootstrap',
     'ngDropzone',
-    'ngFileReader'
+    'ngFileReader',
+    'duScroll'
   ])
   .config(function ($routeProvider, $httpProvider) {
     $routeProvider

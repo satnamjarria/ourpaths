@@ -11,6 +11,12 @@ angular.module('outpathsApp')
   .controller('PathCtrl', function ($scope, $rootScope) {
     //change body class
     $rootScope.bodyClass = 'create-page';
+    $scope.childCount = 1;
+    $scope.children=[
+      {childImg:'child1Img',
+       fileReader:'child1FileReader'
+      }
+    ];
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -64,11 +70,23 @@ angular.module('outpathsApp')
       }
 
     };
+    $scope.showPic = true;
     $scope.readMethod = "readAsDataURL";
     $scope.onReaded = function( e, file , param){
       $scope[param] = e.target.result;
       //$scope.img = e.target.result;
       $scope.file = file;
+    };
+    $scope.addChild = function(){
+      $scope.childCount++;
+      $scope.children.push(
+        {childImg:'child'+ $scope.childCount+ 'Img',
+          fileReader:'child'+$scope.childCount+ 'FileReader'
+        }
+      );
+    };
+    $scope.onRead = function(className){
+      console.log(className);
     };
 
   });
