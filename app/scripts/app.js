@@ -48,6 +48,10 @@ angular
         templateUrl: 'views/healing.html',
         controller: 'HealingCtrl'
       })
+      .when('/view/path/:id', {
+        templateUrl: 'views/viewpath.html',
+        controller: 'ViewpathCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

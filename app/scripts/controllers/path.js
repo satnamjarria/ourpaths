@@ -31,7 +31,7 @@ angular.module('outpathsApp')
       autoProcessQueue:false,
       thumbnailWidth:170,
       thumbnailHeight:170,
-      dictDefaultMessage:'Drop images here or click here to select images.'
+      dictDefaultMessage:document.querySelector('#preview-template').innerHTML
     };
     $scope.sidebarClasses = 'col-sm-2 col-md-2 sidebar';
     $scope.sideBarToggle = true;

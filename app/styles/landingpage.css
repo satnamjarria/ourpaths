@@ -191,7 +191,7 @@ body {
   background-color:transparent;
 }
 .library-icon{
-  background:url('../images/library.png') no-repeat;
+  background:url('../images/path_icon1.png') no-repeat;
   height: 24px;
   width: 24px;
 }
@@ -403,8 +403,8 @@ accordion .panel-body{
 
   }
   .toggle-sidebar .glyphicon{
-    color:#000 !important;
-    opacity:0.6;
+    color:#fff !important;
+    opacity:0.9;
     font-size: 15px;
   }
 
@@ -452,11 +452,39 @@ accordion .panel-body{
 .dz-progress{
   display: none;
 }
+/*custom dropzone template */
+.drop-wrapper{
+  border:2px solid #fff;
+}
+.plus-div{
+  border-left: 3px solid;
+  height: 110px;
+  text-align: center;
+}
+.plus-div .glyphicon{
+  top:28%;
+  font-size: 30px;
+  font-family: helvetica;
+}
+.drop-camera-icon .glyphicon{
+  font-size: 80px;
+  margin-top: 10px;
+}
+.drop-def-msg h4{
+  margin-top:0;
+}
+.drop-def-msg h2{
+  margin-bottom: 0;
+}
 form.dz-started .dz-default.dz-message{
   text-align:left !important;
 }
 form.dz-started .dz-default.dz-message span{
   margin-left:2%;
+}
+form.dropzone.dz-started {
+  border: 3px solid #fff !important;
+  border-radius: 10px;
 }
 .dropzone-row{
   overflow-x: auto;

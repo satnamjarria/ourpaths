@@ -21,7 +21,7 @@ angular.module('outpathsApp')
       if($scope.user === 'admin' && $scope.password === 'admin'){
         //$scope.signinModalInstance.close({});
         $modalStack.dismissAll();
-        $location.path( '/path' );
+        $location.path( '/dashboard' );
       }
       else{
         alert('wrong username or password');

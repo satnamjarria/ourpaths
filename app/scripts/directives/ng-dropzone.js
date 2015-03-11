@@ -23,7 +23,10 @@ angular.module('ngDropzone', [])
       $(document).on('click','.add-image',function(){
         $('.dz-message').click();
       });
-      dropzone.on("addedfile", function(file) {
+      dropzone.on('reset',function(){
+        $('.add-image').remove();
+      });
+      dropzone.on('addedfile', function(file) {
         var formWidth = $('.dropzone').width();
         var dropzoneWidth = $('.dropzone-row').width();
         var diff = formWidth - dropzoneWidth;

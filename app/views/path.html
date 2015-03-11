@@ -42,21 +42,43 @@
           <!--<div class="row portrait-row">
             <button class="portrait-btn" data-target="portrait-file" data-desc="portrait-file-name" toggle-accordion>Add a Portrait</button>
           </div>-->
-          <div class="row dropzone-row">
-            <div class="col-sm-10 col-md-10">
-              <br/>
-              <input type="file" class="hidden" id="portrait-file" name="img">
-              <div id="portrait-file-name"></div>
-              <!--<button toggle-accordion data-target="sample-file">Select File</button>
-              <input type="submit">-->
+          <!--start drop template -->
+          <div id="preview-template" style="display: none;">
+          <div class="row">
+            <div class="col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 drop-wrapper">
+              <div class="row">
+                <div class="col-sm-3 col-md-2 drop-camera-icon">
+                  <span class="glyphicon glyphicon-camera"></span>
+                </div>
+                <div class="col-sm-7 col-md-8 drop-def-msg">
+                  <h2>Add a Portrait</h2>
+                  <h4>Click or drag and drop</h4>
+                </div>
+                <div class="col-sm-2 col-md-2 plus-div">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </div>
+              </div>
             </div>
-            <form class="dropzone" method="post" enctype="multipart/form-data" ng-dropzone dropzone="dropzone" dropzone-config="dropzoneConfig">
-              <input name="file" type="file" multiple class="hidden"/>
-            </form>
           </div>
+          </div>
+          <!--end drop template -->
+
         </div>
         <hr/>
         <!--start accordions -->
+        <div class="row dropzone-row">
+          <div class="col-sm-12 col-md-12">
+            <br/>
+            <input type="file" class="hidden" id="portrait-file" name="img">
+            <div id="portrait-file-name"></div>
+            <!--<button toggle-accordion data-target="sample-file">Select File</button>
+            <input type="submit">-->
+          </div>
+          <form class="dropzone" method="post" enctype="multipart/form-data" ng-dropzone dropzone="dropzone" dropzone-config="dropzoneConfig">
+            <input name="file" type="file" multiple class="hidden"/>
+          </form>
+        </div>
+        <hr/>
         <accordion close-others="false">
 
           <!-- image gallery accordion -->
@@ -1006,7 +1028,12 @@
 
         </accordion>
 
+        <br/><br/><br/>
+        <div class="row content-center">
+          <a class="landing-bt" href="#/">Publish</a>
+        </div>
 
+        <br/><br/><br/>
 
         <!--end accordions -->
 
