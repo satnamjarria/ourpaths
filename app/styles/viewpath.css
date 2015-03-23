@@ -11,6 +11,9 @@
   padding:0;
   overflow-x:hidden;
 }
+.view-page .accordion-toggle{
+  outline:none;
+}
 .cover-row{
   background-color:#05abe0;
   width: 100%;
@@ -35,8 +38,9 @@
 .profile-info{
   margin-top:-50px;
   padding: 0 10px;
-  /*background-color: rgba(0,0,0,0.1);*/
+  background-color: rgba(0,0,0,0.2);
   height: 50px;
+  box-shadow: 0px -20px 62px 0px rgba(0,0,0,0.3);
 }
 .left-align{
   float:left;
@@ -61,10 +65,26 @@
   font-size: 65px;
   font-family: fantasy;
 }
-.family-section{
+.view-page .info-section{
+  background-color: #05abe0 !important;
+  min-height: 100px;
+}
+.view-page .info-section .section-heading{
+  margin-top:0;
+}
+.view-page .panel-group{
+  margin-bottom: 0;
+}
+.view-page .section-heading i{
+  margin-top:20px;
+}
+.view-page .panel-group .panel + .panel{
+  margin-top:0 !important;
+}
+.view-page .family-section{
   position: relative;
-  min-height: 400px;
-  background-color: #255edd;
+  min-height: 100px;
+  background-color: #255edd !important;
   left: 0;
   right: 0;
   color:#fff;
@@ -79,10 +99,11 @@
   text-align:center;
   margin-right: 10px;
   position:absolute;
+  left:0;
 }
-.section-heading{
+/*.section-heading{
   margin-top:40px;
-}
+}*/
 .view-page .section-title{
   position: relative;
   left: 110px;
@@ -90,7 +111,7 @@
 }
 .family-thumbs{
   position: relative;
-  margin-top: 170px;
+  margin-top: 20px;
 }
 .family-thumbs .thumb img{
   width: 200px;
@@ -110,15 +131,26 @@
 }
 .view-page .joy-section{
   position: relative;
-  min-height: 400px;
-  background-color: #05abe0;
+  min-height: 100px;
+  background-color: #05abe0 !important;
   left: 0;
   right: 0;
   color:#fff;
   padding-bottom:20px;
 }
+.view-page .panel-default{
+  border-color: transparent;
+}
+.view-page .panel-default > .panel-heading{
+  background-color: transparent;
+  border-color: transparent;
+  color:#fff;
+}
+.view-page .panel{
+  margin-bottom: 0;
+}
 .joy-thumbs{
-  margin-top:200px;
+  margin-top:50px;
 }
 .joy-thumbs .thumbnail-wrapper p{
   margin-top:-40px;
@@ -128,11 +160,18 @@
   height: 250px;
   background-size: cover;
 }
+.view-page .comments-section.panel{
+  background-color: #01a8e3 !important;
+}
+.view-page .panel{
+  border-radius:0;
+}
 .comments-section{
   position: relative;
   right: 0;
   left: 0;
-  background-color: #01a8e3;
+  background-color: #01a8e3 !important;
+  min-height: 110px;
 }
 .comment-img{
   float:left;
@@ -188,9 +227,9 @@
   /*top: 2600px;*/
   left: 0;
   right: 0;
-  min-height: 150px;
+  min-height: 100px;
   color: #fff;
-  background-color: #607ac3;
+  background-color: #607ac3 !important;
 }
 .comments-div{
   position:relative;
@@ -216,6 +255,10 @@
   .landing-bt{
     font-size:12px;
   }
+  .view-page .info-section, .view-page .family-section, .view-page .joy-section,
+  .view-page .comments-section, .view-page .path-footer{
+    padding:5px;
+  }
   .circle{
     width:60px;
     height: 60px;
@@ -223,7 +266,7 @@
     padding-top:15px;
   }
  .view-page .section-title{
-    left:70px;
+    left:50px;
   }
   .section-heading{
     padding-left:20px;
@@ -232,9 +275,9 @@
     margin-top:0;
     margin-right:20px;
   }
-  .view-page .panel-heading .section-title{
+  /*.view-page .panel-heading .section-title{
     left:0;
-  }
+  }*/
   .family-thumbnail{
     width:160px;
     height: 160px;

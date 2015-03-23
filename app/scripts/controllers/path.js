@@ -33,6 +33,20 @@ angular.module('outpathsApp')
       thumbnailHeight:170,
       dictDefaultMessage:document.querySelector('#preview-template').innerHTML
     };
+    $scope.career = {
+      jobs : [],
+      addJob :function(){
+        var count = $scope.career.jobs.length;
+        $scope.career.jobs.push(count);
+      }
+    },
+      $scope.military = {
+        tours:[],
+        addTour : function(){
+          var count = $scope.military.tours.length;
+          $scope.military.tours.push(count);
+        }
+      },
     $scope.sidebarClasses = 'col-sm-2 col-md-2 sidebar';
     $scope.sideBarToggle = true;
     $scope.showPrevMarriage = false;
@@ -41,12 +55,6 @@ angular.module('outpathsApp')
       'organization':'glyphicon glyphicon-plus'};
     $scope.className = 'glyphicon glyphicon-minus';
     $scope.toggleClass = function(param){
-      //if ($scope.className === 'glyphicon glyphicon-plus'){
-      //  $scope.className = 'glyphicon glyphicon-minus';
-      //}
-      //else if ($scope.className === 'glyphicon glyphicon-minus'){
-      //  $scope.className = 'glyphicon glyphicon-plus';
-      //}
       if($scope.elementClasses[param] === 'glyphicon glyphicon-plus'){
         $scope.elementClasses[param] = 'glyphicon glyphicon-minus';
       }
@@ -88,5 +96,28 @@ angular.module('outpathsApp')
     $scope.onRead = function(className){
       console.log(className);
     };
+    //datepicker configs
+    $scope.open = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
 
+      $scope.opened = true;
+    };
+    //datepicker
+    $scope.today = function() {
+      $scope.dt = new Date();
+    };
+    $scope.today();
+
+    $scope.clear = function () {
+      $scope.dt = null;
+    };
+    $scope.openDatePopup = function($event, prop) {
+      $event.preventDefault();
+      $event.stopPropagation();
+      $scope[prop] = true;
+      setTimeout(function() {
+        $scope[prop] = false;
+      }, 10);
+    };
   });

@@ -13,19 +13,6 @@
           should have to grieve alone.
         </p>
         <div class="row marketing">
-          <!--<div class="radio row">
-            <div class="col-sm-4 col-md-4">
-              <p>Is this foot print for an individual or a group? </p>
-            </div>
-            <div class="col-sm-2 col-md-2">
-              <input type="radio" name="indi-group" id="individual-rd">
-              <label for="individual-rd"><span></span>Individual</label>
-            </div>
-            <div class="col-sm-2 col-md-2">
-              <input type="radio" name="indi-group" id="group-rd">
-              <label for="group-rd"><span></span>Group</label>
-            </div>
-          </div>-->
           <div class="radio row">
             <div class="col-sm-4 col-md-4">
               <p>Is this path public or private? </p>
@@ -114,7 +101,7 @@
               <div class="row">
                 <div class="col-sm-4 col-md-4">
                   <span class="glyphicon glyphicon-user"></span>
-                  <span class="section-title">Basic Info</span>
+                  <span class="section-title">Personal Information</span>
                 </div>
                 <i class="pull-right glyphicon" ng-class="{'glyphicon-minus': status.infoOpen, 'glyphicon-plus': !status.infoOpen}"></i>
 
@@ -152,11 +139,6 @@
                 </div>
               </div>
               <div class="row">
-                <div class=" form-group col-sm-12 col-md-12">
-                  <input type="text" class="form-control" placeholder="Suffix"/>
-                </div>
-              </div>
-              <div class="row">
                 <div class="form-group col-sm-12 col-md-12">
                     <input type="text" class="form-control" placeholder="Place of birth"/>
                 </div>
@@ -170,13 +152,25 @@
 
               </div>-->
               <div class="row">
-                <div class="col-sm-6 col-md-6 form-group">
-                  <label for="">Date of Birth</label>
-                  <input type="date" class="form-control" placeholder=""/>
+                <div class="col-sm-5 col-md-5 form-group">
+                  <!--<label for="">Date of Birth</label>-->
+                  <p class="input-group calendar-input">
+                    <span class="input-group-btn">
+                      <input type="text" class="form-control" datepicker-popup="" ng-model="personalInfo.birthDate" is-open="birthDateOpened" ng-required="true" close-text="Close" placeholder="Date of Birth" />
+
+                      <button type="button" class="btn btn-default" ng-click="openDatePopup($event,'birthDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                  </p>
                 </div>
-                <div class="col-sm-6 col-md-6 form-group">
-                  <label for="">Date of Death</label>
-                  <input type="date" class="form-control" placeholder=""/>
+                <div class="col-sm-5 col-md-5 form-group col-sm-offset-1 col-md-offset-1">
+                  <!--<label for="">Date of Death</label>-->
+                  <p class="input-group calendar-input">
+                    <span class="input-group-btn">
+                      <input type="text" class="form-control" datepicker-popup="" ng-model="personalInfo.deathDate" is-open="deathDateOpened" ng-required="true" close-text="Close" placeholder="Date of Death" />
+
+                      <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'deathDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                  </p>
                 </div>
               </div>
               <div class="row">
@@ -213,17 +207,24 @@
                           <form class="form-horizontal">
                             <div class="form-group">
                               <div class="col-sm-8 col-md-8">
-                                <input type="text" class="form-control" id="" placeholder="spouse or partner name"/>
+                                <input type="text" class="form-control" id="" placeholder="Spouse or partner name"/>
                               </div>
                             </div>
                             <div class="form-group">
                               <div class="col-sm-8 col-md-8">
                                 <input type="date" class="form-control" id="" placeholder="ceremony date"/>
+                                <!--<p class="input-group">
+                                  <span class="input-group-btn">
+                                    <input type="text" class="form-control" datepicker-popup="mm.dd.yyyy" ng-model="dt" is-open="dateOpened" ng-required="true" close-text="Close" />
+
+                                    <button type="button" class="btn btn-default" ng-click="openDatePopup($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                  </span>
+                                </p>-->
                               </div>
                             </div>
                             <div class="form-group">
                               <div class="col-sm-8 col-md-8">
-                                <input type="text" class="form-control" id="" placeholder="ceremony place"/>
+                                <input type="text" class="form-control" id="" placeholder="Ceremony place"/>
                               </div>
                             </div>
                             <div class="form-group">
@@ -246,7 +247,7 @@
                             <h3>Previous Marriage Info</h3>
                             <div class="form-group">
                               <div class="col-sm-8 col-md-8">
-                                <input type="text" class="form-control" id="" placeholder="spouse or partner name" />
+                                <input type="text" class="form-control" id="" placeholder="Spouse or partner name" />
                               </div>
                             </div>
                             <div class="form-group">
@@ -256,7 +257,7 @@
                             </div>
                             <div class="form-group">
                               <div class="col-sm-8 col-md-8">
-                                <input type="text" class="form-control" id="" placeholder="ceremony place"/>
+                                <input type="text" class="form-control" id="" placeholder="Ceremony place"/>
                               </div>
                             </div>
                             <div class="form-group">
@@ -277,7 +278,7 @@
                             <form class="form-horizontal">
                               <div class="form-group">
                                 <div class="col-sm-8 col-md-8">
-                                  <input type="text" class="form-control" id="" placeholder="child's name"/>
+                                  <input type="text" class="form-control" id="" placeholder="Child's name"/>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -287,7 +288,7 @@
                               </div>
                               <div class="form-group">
                                 <div class="col-sm-8 col-md-8">
-                                  <input type="text" class="form-control" id="" placeholder="birthplace"/>
+                                  <input type="text" class="form-control" id="" placeholder="Birthplace"/>
                                 </div>
                               </div>
                               <div class="form-group">
@@ -316,12 +317,12 @@
                           <form class="form-horizontal">
                             <div class="form-group">
                               <div class="col-sm-8 col-md-8">
-                                <input type="text" class="form-control" id="" placeholder="mother's full name"/>
+                                <input type="text" class="form-control" id="" placeholder="Mother's full name"/>
                               </div>
                             </div>
                             <div class="form-group">
                               <div class="col-sm-8 col-md-8">
-                                <input type="text" class="form-control" id="" placeholder="father's full name"/>
+                                <input type="text" class="form-control" id="" placeholder="Father's full name"/>
                               </div>
                             </div>
                             <div class="form-group ">
@@ -367,7 +368,7 @@
             <div class=" organization">
                 <div class="row">
                   <div class="col-sm-8 col-md-8 col-sm-offset-2">
-                    <input type="text" class="form-control" placeholder="Life Path Title"/>
+                    <input type="text" class="form-control" placeholder="Write a summary headline of the Honoree’s life."/>
                   </div>
                 </div>
                 <div class="row">
@@ -391,10 +392,70 @@
                                   <input type="text" class="form-control" id="high-school" placeholder="High School">
                                 </div>
                                 <div class="form-group">
+                                  <div class="col-sm-4 col-md-4 no-padding">
+                                    <p class="input-group calendar-input">
+                                      <span class="input-group-btn">
+                                        <input type="text" class="form-control" datepicker-popup="" ng-model="education.hsFromDate" is-open="hsFromDateOpened" ng-required="true" close-text="Close" placeholder="From" />
+
+                                        <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'hsFromDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                    </p>
+                                  </div>
+                                  <div class="col-sm-4 col-md-4  col-sm-offset-3 col-md-offset-3 no-padding">
+                                    <p class="input-group calendar-input">
+                                      <span class="input-group-btn">
+                                        <input type="text" class="form-control" datepicker-popup="" ng-model="education.hsToDate" is-open="hsToDateOpened" ng-required="true" close-text="Close" placeholder="To" />
+
+                                        <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'hsToDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="form-group">
                                   <input type="text" class="form-control" id="college" placeholder="College or University">
                                 </div>
                                 <div class="form-group">
+                                  <div class="col-sm-4 col-md-4 no-padding">
+                                    <p class="input-group calendar-input">
+                                      <span class="input-group-btn">
+                                        <input type="text" class="form-control" datepicker-popup="" ng-model="education.collegeFromDate" is-open="collegeFromDateOpened" ng-required="true" close-text="Close" placeholder="From" />
+
+                                        <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'collegeFromDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                    </p>
+                                  </div>
+                                  <div class="col-sm-4 col-md-4  col-sm-offset-3 col-md-offset-3 no-padding">
+                                    <p class="input-group calendar-input">
+                                      <span class="input-group-btn">
+                                        <input type="text" class="form-control" datepicker-popup="" ng-model="education.collegeToDate" is-open="collegeToDateOpened" ng-required="true" close-text="Close" placeholder="To" />
+
+                                        <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'collegeToDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="form-group">
                                   <input type="text" class="form-control" id="post-grad" placeholder="Post-Graduate Studies">
+                                </div>
+                                <div class="form-group">
+                                  <div class="col-sm-4 col-md-4 no-padding">
+                                    <p class="input-group calendar-input">
+                                      <span class="input-group-btn">
+                                        <input type="text" class="form-control" datepicker-popup="" ng-model="education.pgFromDate" is-open="pgFromDateOpened" ng-required="true" close-text="Close" placeholder="From" />
+
+                                        <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'pgFromDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                    </p>
+                                  </div>
+                                  <div class="col-sm-4 col-md-4  col-sm-offset-3 col-md-offset-3 no-padding">
+                                    <p class="input-group calendar-input">
+                                      <span class="input-group-btn">
+                                        <input type="text" class="form-control" datepicker-popup="" ng-model="education.pgToDate" is-open="pgToDateOpened" ng-required="true" close-text="Close" placeholder="To" />
+
+                                        <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'pgToDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                    </p>
+                                  </div>
                                 </div>
                                 <div class="form-group">
                                   <input type="text" class="form-control" id="prof-voc" placeholder="Professional or Vocational">
@@ -408,48 +469,18 @@
                                 <div class="form-group">
                                   <input type="text" class="form-control" id="lifelong-studies" placeholder="Lifelong Studies">
                                 </div>
-                                <!--<div class="form-group">
-                                  <label for="inputEmail3" class="col-sm-3 control-label">High/Secondary School</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="inputEmail3" placeholder="school">
+                                <div class="form-group">
+                                  <div class="col-sm-8 col-md-8">
+                                    <div class="education-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'educationImg' )" read-method="readMethod"  multiple>
+
+                                    </div>
+                                    <br/><br/>
+                                    <div class="img-div">
+                                      <img ng-src="{{educationImg}}" height="100" width="100">
+                                      <a class="btn" onclick="$('.education-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">College or University</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="college"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Post-Graduate Studies</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="post grad studies"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Professional or Vocational</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="professional or vocational"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Other</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="other"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Licenses</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="licenses"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Lifelong Studies</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="lifelong studies"/>
-                                  </div>
-                                </div>-->
                               </form>
                             </div>
                           </div><!--end row-->
@@ -469,30 +500,6 @@
                           <div class="row tab-content">
                             <div class="col-sm-8 col-md-8 ">
                               <form class="form-horizontal">
-                                <!--<div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Branch:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="branch"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Rank Achieved:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="rank achieved"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Tours of Duty:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="tours of duty"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-3 control-label">Honors</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="honors"/>
-                                  </div>
-                                </div>-->
                                 <div class="form-group">
                                   <input type="text" class="form-control" id="" placeholder="Branch">
                                 </div>
@@ -503,9 +510,48 @@
                                   <input type="text" class="form-control" id="tours-duty" placeholder="Tours of Duty">
                                 </div>
                                 <div class="form-group">
+                                  <div class="col-sm-4 col-md-4 no-padding">
+                                    <p class="input-group calendar-input">
+                                    <span class="input-group-btn">
+                                      <input type="text" class="form-control" datepicker-popup="" ng-model="military.tourFromDate" is-open="tourFromDateOpened" ng-required="true" close-text="Close" placeholder="From" />
+
+                                      <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'tourFromDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                    </p>
+                                  </div>
+                                  <div class="col-sm-4 col-md-4  col-sm-offset-3 col-md-offset-3 no-padding">
+                                    <p class="input-group calendar-input">
+                                    <span class="input-group-btn">
+                                      <input type="text" class="form-control" datepicker-popup="" ng-model="military.tourToDate" is-open="tourToDateOpened" ng-required="true" close-text="Close" placeholder="To" />
+
+                                      <button type="button" class="btn btn-default" ng-click="openDatePopup($event, 'tourToDateOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="form-group">
                                   <input type="text" class="form-control" id="honors" placeholder="Honors">
                                 </div>
+                                <div ng-repeat="tour in military.tours">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" id="tours-duty" placeholder="Tours of Duty">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="col-sm-8 col-md-8">
+                                    <div class="military-file-reader hidden" ng-file-reader on-readed="onReaded( event, file, 'militaryImg' )" read-method="readMethod"  multiple>
+
+                                    </div>
+                                    <br/><br/>
+                                    <div class="img-div">
+                                      <img ng-src="{{militaryImg}}" height="100" width="100">
+                                      <a class="btn" onclick="$('.military-file-reader input').click();"><span class="glyphicon glyphicon-camera"></span></a>
+                                    </div>
+                                  </div>
+                                </div>
                               </form>
+
+                              <button class="btn-default btn marriage-btn" ng-click="military.addTour()">Add Another Tour</button>
                             </div>
                           </div><!--end row-->
                         </tab>
@@ -513,58 +559,31 @@
                           <div class="row tab-content">
                             <div class="col-sm-8 col-md-8 ">
                               <form class="form-horizontal">
-                                <!--<div class="form-group">
-                                  <label for="" class="col-sm-4 control-label">Description of life's work, profession, trade or business:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="life's work, profession or business"/>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="" placeholder="Life's work, profession or business">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="" placeholder="Job/Title">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="" placeholder="Dates">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="" placeholder="Volunteer work">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="" placeholder="Dates">
+                                </div>
+                                <div ng-repeat="job in career.jobs">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Job/Title">
                                   </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-4 control-label">Job/Title:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="job/title"/>
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Dates">
                                   </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-4 control-label">Dates:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="dates"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-4 control-label">Volunteer Work:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="volunteer work"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-4 control-label">Dates:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="dates"/>
-                                  </div>
-                                </div>
-                                <div class="form-group">
-                                  <label for="" class="col-sm-4 control-label">Employer's name or details of work, invention, business:</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="" placeholder="employer's name or details of work"/>
-                                  </div>
-                                </div>-->
-                                <div class="form-group">
-                                  <input type="text" class="form-control" id="" placeholder="life's work, profession or business">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" id="" placeholder="job/title">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" id="" placeholder="dates">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" id="" placeholder="volunteer work">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" id="" placeholder="dates">
                                 </div>
                               </form>
+                              <button class="btn-default btn marriage-btn" ng-click="career.addJob()">Add Another Job</button>
                             </div>
                           </div><!--end row-->
                         </tab>
@@ -584,7 +603,7 @@
               <div class="row joy">
                 <div class="col-sm-4 col-md-4">
                   <span><i class="fa fa-heart-o"></i></span>
-                  <span class="section-title">JOYS</span>
+                  <span class="section-title">Joy</span>
                 </div>
                 <i class="pull-right glyphicon" ng-class="{'glyphicon-minus': status.joyOpen, 'glyphicon-plus': !status.joyOpen}"></i>
 
@@ -1034,7 +1053,16 @@
         </div>
 
         <br/><br/><br/>
-
+        <!--<div class="row">
+          <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" placeholder="dob" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+          </div>
+        </div>-->
         <!--end accordions -->
 
 

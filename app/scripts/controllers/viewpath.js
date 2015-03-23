@@ -9,6 +9,13 @@
  */
 angular.module('outpathsApp')
   .controller('ViewpathCtrl', function ($scope, $rootScope) {
+    $scope.status = {
+      basicInfoOpen: true,
+      familyInfoOpen: true,
+      joyOpen:true,
+      commentsOpen:false,
+      pathOpen:true
+    };
     $rootScope.bodyClass = 'view-page';
     $scope.sideBarToggle = true;
     $scope.responseJson = {
@@ -16,6 +23,34 @@ angular.module('outpathsApp')
       lastName: 'Gram',
       years: '1951-2004',
       quote:'I hear and forget. I see and I remember. I do and I understand.',
+      personal_info:{
+        dob:'12/30/51',
+        place_birth:'Seattle, Washington',
+        dod:'2/18/14',
+        place_death:'Seattle, Washington'
+      },
+      lifePath:{
+        title:'Alan lived for adventure the great out doors was his home.',
+        desc:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. ',
+        education:[
+          {
+            name:'Saint Marry High School',
+            dates:'1980 - 1985'
+          }
+        ],
+        community:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.',
+        military:{
+          branch:'Navy Seal',
+          rank:'Captain',
+          tours:3,
+          honors:'Purple Heart',
+          dates:'1991 - 2000'
+        },
+        career:{
+          title:'Mechanical Engineer, Software Engineer, CEO',
+          dates:'1991 - 2014'
+        }
+      },
       family:[
         {
           imgUrl:'../images/elizabeth.jpg',

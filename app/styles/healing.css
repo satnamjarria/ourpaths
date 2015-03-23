@@ -3,17 +3,37 @@
   background-size: cover;
   background-color: #b1de53;
 }
-.hands-circle{
-  width: 100px;
-  height: 100px;
+.healing-page .circle{
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 3px solid white;
   margin-left: auto;
   margin-right: auto;
+  float:left;
 }
-.hands-circle img{
+.healing-page .circle img{
   height: 50%;
+}
+.healing-page .section-title{
+  float:left;
+  margin-left:110px;
+}
+.healing-page .tab li.active a {
+  border-bottom: 3px solid #fff;
+  padding-bottom: 2px;
+}
+.healing-page .tab li a{
+  text-decoration: none;
+}
+.healing-page .donate-thumb{
   margin-top:20px;
+  overflow: hidden;
+}
+.healing-page .tab li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
 }
 .bold{
   font-weight: bold;

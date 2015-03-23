@@ -3,7 +3,9 @@
   font-family: 'Helvetica Neue';
   src: url('../fonts/HelveticaNeue-Thin.otf') ;
 }
-
+.create-page{
+  overflow-x:hidden;
+}
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -476,6 +478,9 @@ accordion .panel-body{
 .drop-def-msg h2{
   margin-bottom: 0;
 }
+.no-padding{
+  padding:0;
+}
 form.dz-started .dz-default.dz-message{
   text-align:left !important;
 }
@@ -492,6 +497,10 @@ form.dropzone.dz-started {
 }
 form.dropzone.dz-started{
   /*width:5000px;*/
+}
+p.calendar-input .glyphicon {
+  color: grey;
+  font-size: 15px;
 }
 .dropzone .dz-preview.dz-image-preview.add-image{
   width:170px;
