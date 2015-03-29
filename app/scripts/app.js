@@ -52,6 +52,14 @@ angular
         templateUrl: 'views/viewpath.html',
         controller: 'ViewpathCtrl'
       })
+      .when('/terms-of-use', {
+        templateUrl: 'views/terms-of-use.html',
+        controller: 'TermsOfUseCtrl'
+      })
+      .when('/privacy-policy', {
+        templateUrl: 'views/privacy-policy.html',
+        controller: 'PrivacyPolicyCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

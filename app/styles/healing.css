@@ -1,7 +1,17 @@
 .healing-page{
-  background: url('../images/green-rock.png') no-repeat center center fixed;
+  /*background: url('../images/green-rock.png') no-repeat center center fixed;*/
+  /*background:none;
   background-size: cover;
-  background-color: #b1de53;
+  background-color: #5b7e23;*/
+  background: #5b7e23; /* Old browsers */
+  background: -moz-linear-gradient(top,  #5b7e23 0%, #a5c55e 50%, #a5c55e 51%, #647f2e 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5b7e23), color-stop(50%,#a5c55e), color-stop(51%,#a5c55e), color-stop(100%,#647f2e)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #5b7e23 0%,#a5c55e 50%,#a5c55e 51%,#647f2e 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #5b7e23 0%,#a5c55e 50%,#a5c55e 51%,#647f2e 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #5b7e23 0%,#a5c55e 50%,#a5c55e 51%,#647f2e 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #5b7e23 0%,#a5c55e 50%,#a5c55e 51%,#647f2e 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b7e23', endColorstr='#647f2e',GradientType=0 ); /* IE6-9 */
+
 }
 .healing-page .circle{
   width: 80px;
@@ -53,6 +63,7 @@
   text-decoration: none;
   color:#fff;
 }
+
 .heal-circle{
   width:100px;
   height: 100px;
@@ -74,7 +85,37 @@
   letter-spacing: 1px !important;
   text-align:center !important;
 }
+.skip-links{
+  background-color: #77924b;
+  min-height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
 .skip-links a{
   color:#fff;
   text-decoration: none;
+  margin-left: 10px;
+}
+.skip-links a:after{
+  content:'|';
+  margin-left:10px;
+}
+.skip-links a:last-child:after{
+  content:'';
+}
+.skip-links .glyphicon {
+  font-size:14px !important;
+}
+.healing-page .no-top-margin{
+  margin-top:0;
+}
+.healing-page p, .healing-page li {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.healing-page .tab li {
+  letter-spacing: 0;
 }

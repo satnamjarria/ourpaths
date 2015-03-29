@@ -18,20 +18,40 @@
       <div class="row">
         <div class="col-sm-12 col-xs-12 col-md-12">
           <tabset>
-            <div class="col-sm-2 col-xs-2 col-md-2 tab">
+            <div class="col-sm-3 col-xs-4 col-md-2 tab">
               <!-- start meditation tab -->
-              <tab heading="Meditation">
+              <tab heading="MEDITATIONS">
+                <br/><br/>
+                <div class="" ng-repeat="section in responseJson.image_quotes">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                      <div class="heal-circle" ng-style="{'background':'url({{section.image}})'}">
 
+                      </div>
+                    </div>
+                  </div><!--end row--><br/>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 ">
+                      <p>{{section.quote}}</p>
+                      <br/>
+                      <span>- {{section.author}}</span>
+                    </div>
+                  </div><!--end row --><br/>
+                </div>
                 <!--Active Paths -->
                 <div class="" ng-repeat="section in responseJson.quotes">
                   <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                      <h1>{{section.title}}</h1>
+                    <div class="col-md-10 col-sm-10">
+                      <h3 class="bold">{{section.title}}</h3>
                     </div>
                   </div><!--end row--><br/>
                   <div class="" ng-repeat="quote in section.quotes">
-                    <h5>{{quote.quote}}</h5>
-                    <i>{{quote.author}}</i>
+                    <div class="row">
+                      <div class="col-md-10 col-sm-10">
+                        <p>{{quote.quote}}</p>
+                        <p><i>- {{quote.author}}</i></p>
+                      </div>
+                    </div><br/>
                   </div>
                   <br/>
                 </div>
@@ -41,27 +61,27 @@
               </tab>
               <!-- end meditation tab -->
             </div>
-            <div class="col-sm-2 col-xs-2 col-md-2 tab">
+            <div class="col-sm-3 col-xs-4 col-md-2 tab">
               <!-- start living with death tab -->
-              <tab heading="Living With death">
-                <div class="row skip-links">
-                  <div class="col-md-12 col-sm-12">
-                    <strong>SKIP TO:</strong>
-                    <a href="#helpingTheDying" du-smooth-scroll du-scrollspy>HELPING THE DYING</a> |
-                    <a href="#copingWithLoss" du-smooth-scroll du-scrollspy>COPING WITH THE LOSS OF A LOVED ONE</a> |
-                    <a href="#movingFromPain" du-smooth-scroll du-scrollspy>MOVING FROM PAIN TO PEACE</a> |
+              <tab heading="LIVING WITH DEATH">
+                <div class="row ">
+                  <div class="col-md-10 col-sm-10 skip-links">
+                    <strong>SKIP TO: <span class="glyphicon glyphicon-triangle-right"></span></strong>
+                    <a href="#helpingTheDying" du-smooth-scroll du-scrollspy>HELPING THE DYING</a>
+                    <a href="#copingWithLoss" du-smooth-scroll du-scrollspy>COPING WITH THE LOSS OF A LOVED ONE</a>
+                    <a href="#movingFromPain" du-smooth-scroll du-scrollspy>MOVING FROM PAIN TO PEACE</a>
                     <a href="#additionalResources" du-smooth-scroll du-scrollspy>ADDITIONAL RESOURCES</a>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h3>Solace: learning to let go</h3>
+                  <div class="col-md-10 col-sm-10">
+                    <br/><br/>
+                    <h3 class="bold no-top-margin">Helping the Dying</h3>
+                    <h3 class="bold no-top-margin">by Dr. Roger Shikan Hawkins</h3>
                   </div>
                 </div>
                 <div class="row" id="helpingTheDying">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Helping the Dying</h4>
-                    <h5>by Dr. Roger Shikan Hawkins</h5>
+                  <div class="col-md-10 col-sm-10">
                     <p>
                       For human beings, the most essential thing in life is to establish heartfelt communication with others,
                       and this is never more important than with a dying person. Death is still a very uncomfortable subject for
@@ -72,8 +92,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>When you visit</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">When you visit</h3>
                     <p>
                       The most helpful thing to do when you visit someone who is dying is to relax any tension in the atmosphere
                       in whatever way comes most easily and naturally. People will die as they have lived, as themselves. Those who
@@ -90,8 +110,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Facing the fear of death</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Facing the fear of death</h3>
                     <p>
                       Being aware of your own fears about dying will help you to be aware of the fears of the dying person. For most of us,
                       we will be unable to be at ease with the dying until we have acknowledged to ourselves how their dying disturbs us
@@ -111,8 +131,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Being forthright and truthful</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Being forthright and truthful</h3>
                     <p>
                       People often ask, Should people be told they are dying? And I always say: Yes, as quietly, as kindly, as sensitively, and as skillfully as possible.
                        Elizabeth Kubler-Ross observed that, Most, if not all, of the patients know anyway. They sense it by the changed attention, by the new and different
@@ -145,8 +165,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Reconciliation</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Reconciliation</h3>
                     <p>
                       When death is approaching, people often have a lot of anxiety about leaving unfinished business behind.
                       Sometimes people are afraid to let go and die because they haven’t come to terms with what they have been
@@ -172,8 +192,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Saying goodbye and letting go</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Saying goodbye and letting go</h3>
                     <p>
                       It is not only the tensions that we have to learn to let go of, but the dying person as well.
                       If we are excessively attached and clinging too tightly to the person who is dying, we make it
@@ -206,8 +226,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Providing a peaceful atmosphere</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Providing a peaceful atmosphere</h3>
                     <p>
                       I intuitively feel that here in the West we have made a lot of progress in recent years towards creating calm and
                       harmonious environments for people dying. By being willing to learn from other cultures that have been more accepting
@@ -242,9 +262,10 @@
                   </div>
                 </div>
                 <div class="row" id="copingWithLoss">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Coping with the loss of a loved one</h4>
-                    <h3>By Roger M. Solomon, Ph.D.</h3>
+                  <div class="col-md-10 col-sm-10">
+                    <br/>
+                    <h3 class="bold no-top-margin">Coping with the loss of a loved one</h3>
+                    <h3 class="bold no-top-margin">By Roger M. Solomon, Ph.D.</h3>
                     <p>
                       The death of a loved one can be very painful. The mourner can be confronted with particularly difficult
                       challenges at a time of often unparalleled distress. Grieving is a natural process and involves feeling
@@ -304,8 +325,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Coping with loss</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Coping with loss</h3>
                     <p>
                       With time and support the mourner works through the grief and comes to accept and make sense of the loss, and adapt to a new life and identity.
                       The following tips may be helpful in coping:
@@ -416,8 +437,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Six stages of grief</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Six stages of grief</h3>
                     <p>
                       There are six stages most likely to be encountered on one’s journey through grief – what some grief experts call the
                       “reconciliation needs of mourning.” For while your journey will be an intensely personal, unique experience, everybody
@@ -504,8 +525,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Reconciling your grief</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Reconciling your grief</h3>
                     <p>
                       Many believe their grief journey will end when they resolve, or recover from, their grief. But the journey will
                       never end. People do not “get over” grief. Reconciliation is a more appropriate term for what occurs as the mourner works to integrate
@@ -519,9 +540,10 @@
                   </div>
                 </div>
                 <div class="row" id="movingFromPain">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Moving from Pain to Peace</h4>
-                    <h5>By Dr. Francine Shapiro, PhD</h5>
+                  <div class="col-md-10 col-sm-10">
+                    <br/><br/>
+                    <h3 class="bold no-top-margin">Moving from Pain to Peace</h3>
+                    <h3 class="bold no-top-margin">By Dr. Francine Shapiro, PhD</h3>
                     <p>
                       While we all face mortality and death, few things cause more grief than the loss of a loved one. When this happens it is
                       important to accept the comfort and nurturing of others, and to allow ourselves to mourn and grieve in our own way. Some
@@ -610,12 +632,12 @@
                   </div>
                 </div>
                 <div class="row" id="additionalResources">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Additional Resources</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Additional Resources</h3>
                     <p>
                       Here are some of the places to find help and sources of additional further information. With appreciation to Dr. Roger Solomon
                     </p>
-                    <h4>National organizations and websites The Centering Corporation</h4>
+                    <h4 class="bold">National organizations and websites The Centering Corporation</h4>
                     <p>
                       Toll-free number: 1-866-218-0101
                     </p>
@@ -626,7 +648,7 @@
                       Information and resources for grieving adults, children who have lost parents
                     </p>
 
-                    <h4>The Compassionate Friends</h4>
+                    <h4 class="bold">The Compassionate Friends</h4>
                     <p>
                       Toll-free number: 1-877-969-0010
                     </p>
@@ -637,7 +659,7 @@
                       For those coping with the death of a child
                     </p>
 
-                    <h4>The Dougy Center</h4>
+                    <h4 class="bold">The Dougy Center</h4>
                     <p>
                       Toll-free number: 1-866-775-5683
                     </p>
@@ -648,7 +670,7 @@
                       Information on grieving, and referrals to local programs that serve grieving children, teens and their families
                     </p>
 
-                    <h4>GriefNet</h4>
+                    <h4 class="bold">GriefNet</h4>
                     <p>
                       Web site for adults: www.griefnet.org
                     </p>
@@ -659,7 +681,7 @@
                       Offers online groups for grief support, with a special sub-site for children
                     </p>
 
-                    <h4>Hospice Net</h4>
+                    <h4 class="bold">Hospice Net</h4>
 
                     <p>Web site: www.hospicenet.org</p>
 
@@ -676,7 +698,7 @@
                       Information on childhood cancer, and links to online support, such as groups for parents who have lost a child to cancer
                     </p>
 
-                    <h4>
+                    <h4 class="bold">
                       Substance Abuse and Mental Health Services Administration (SAMHSA)
                     </h4>
 
@@ -692,7 +714,7 @@
                       Has different types of help and support for mental health issues
                     </p>
 
-                    <h4>
+                    <h4 class="bold">
                       National Mental Health Information Center
                     </h4>
                     <p>
@@ -701,7 +723,7 @@
                     <p>
                       TTY: 1-866-889-2647
                     </p>
-                    <h4>
+                    <h4 class="bold">
                       National Clearinghouse for Alcohol and Drug Information (NCADI)
                     </h4>
                     <p>
@@ -713,14 +735,14 @@
                     <p>
                       International phone number: 1-240-221-4017
                     </p>
-                    <h4>
+                    <h4 class="bold">
                       Suicide Prevention Hotline:
                     </h4>
                     <p>
                       Toll-free number: 1-800-273-TALK
                     </p>
 
-                    <h4>
+                    <h4 class="bold">
                       National Funeral Directors Association (NFDA)
                     </h4>
                     <p>
@@ -738,24 +760,24 @@
               </tab>
               <!--end living with death -->
             </div>
-            <div class="col-sm-2 col-xs-2 col-md-2 tab">
+            <div class="col-sm-3 col-xs-4 col-md-2 tab">
               <!-- start practicalities tab -->
-              <tab heading="Practicalities">
-                <div class="row skip-links">
-                  <div class="col-md-12 col-sm-12">
-                    <strong>SKIP TO:</strong>
-                    <a href="#layingGroundwork" du-smooth-scroll du-scrollspy>LAYING THE GROUNDWORK</a> |
-                    <a href="#preparingEssentials" du-smooth-scroll du-scrollspy>PREPARING THE ESSENTIALS</a> |
-                    <a href="#theBody" du-smooth-scroll du-scrollspy>THE BODY</a> |
-                    <a href="#funeral" du-smooth-scroll du-scrollspy>FUNERAL HOME DECISIONS</a> |
-                    <a href="#theEstate" du-smooth-scroll du-scrollspy>THE ESTATE</a> |
+              <tab heading="PRACTICALITIES">
+                <div class="row">
+                  <div class="col-md-10 col-sm-10 skip-links">
+                    <strong>SKIP TO: <span class="glyphicon glyphicon-triangle-right"></span></strong>
+                    <a href="#layingGroundwork" du-smooth-scroll du-scrollspy>LAYING THE GROUNDWORK</a>
+                    <a href="#preparingEssentials" du-smooth-scroll du-scrollspy>PREPARING THE ESSENTIALS</a>
+                    <a href="#theBody" du-smooth-scroll du-scrollspy>THE BODY</a>
+                    <a href="#funeral" du-smooth-scroll du-scrollspy>FUNERAL HOME DECISIONS</a>
+                    <a href="#theEstate" du-smooth-scroll du-scrollspy>THE ESTATE</a>
                     <a href="#potentialBenefits" du-smooth-scroll du-scrollspy>POTENTIAL BENEFIT ENTITLEMENTS</a>
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Practicalities: Don’t postpone the inevitable</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Practicalities: Don’t postpone the inevitable</h3>
                     <p>
                       None of us think we will die this week. The desire to postpone dealing with the practicalities associated with
                       death can be overpowering. Those who have experienced the unplanned death of a loved one, however, will tell you
@@ -771,8 +793,8 @@
                 </div>
 
                 <div class="row" id="layingGroundwork">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Laying the Groundwork</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Laying the Groundwork</h3>
                     <p>
                       Failing to plan for the inevitable isn’t fair to your loved ones. Failing to help a loved one tie up his or her
                       affairs before they die is unkind. Just do it.
@@ -906,8 +928,8 @@
                   </div>
                 </div>
                 <div class="row" id="preparingEssentials">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Preparing – The Essentials</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Preparing – The Essentials</h3>
                     <p>
                       The more you prepare, the easier it will be for your family or heirs to carry out your wishes. For some people, keeping records is part of a normal life.
                       For others, an organized filing cabinet is a vague dream. Wherever you fall in the spectrum, at least prepare The Essentials.
@@ -982,8 +1004,8 @@
                 </div>
 
                 <div class="row" id="theBody">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>The Body</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">The Body</h3>
                     <p>
                       There is nothing more fundamental than dealing with the body of someone who dies. And there is no aspect
                       of death that we want to talk about less. Does a person have a choice to die at home? After death, what does
@@ -1098,8 +1120,8 @@
                 </div>
 
                 <div class="row" id="funeral">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Funeral Decisions</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Funeral Decisions</h3>
                     <p>
                       Funeral homes can be very helpful and supportive. They also can be expensive. It’s best to take the time to choose one before you need one. There’s nothing wrong with checking Yelp.
                     </p>
@@ -1273,8 +1295,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>The Estate</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">The Estate</h3>
                     <p>
                       By estate, we don’t mean your home or that huge mansion on the other side of town; your estate is everything you own
                       that will be distributed after your death. If you have a trust or a will, the executor or trustee will have that responsibility.
@@ -1372,8 +1394,8 @@
                 </div>
 
                 <div class="row" id="potentialBenefits">
-                  <div class="col-md-12 col-sm-12">
-                    <h4>Potential Benefit Entitlements</h4>
+                  <div class="col-md-10 col-sm-10">
+                    <h3 class="bold">Potential Benefit Entitlements</h3>
                     <p>
                       There are a number of single-time benefits that survivors may be entitled to receive.
                     </p><br/>
@@ -1413,15 +1435,15 @@
               </tab>
               <!-- end practicalities tab -->
             </div>
-            <div class="col-sm-2 col-xs-2 col-md-2 tab">
+            <div class="col-sm-3 col-xs-4 col-md-2 tab">
               <!-- start volunteer tab -->
-              <tab heading="Volunteer">
+              <tab heading="VOLUNTEER">
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
                       <span ng-repeat="item in responseJson.volunteer">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img src="{{item.path}}" class="img-responsive"/></a>
                         </div>
                       </span>
                   </div>
@@ -1429,15 +1451,15 @@
               </tab>
               <!-- end volunteer tab -->
             </div>
-            <div class="col-sm-2 col-xs-2 col-md-2 tab">
+            <div class="col-sm-3 col-xs-4 col-md-2 tab">
               <!--start donate tab -->
-              <tab heading="Donate">
+              <tab heading="DONATE">
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
                       <span ng-repeat="item in responseJson.donate">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
@@ -1445,96 +1467,96 @@
               </tab>
               <!-- end donate tab -->
             </div>
-            <div class="col-sm-2 col-xs-2 col-md-2 tab">
+            <div class="col-sm-3 col-xs-4 col-md-2 tab">
               <!-- start gifts tab -->
-              <tab heading="Gifts">
+              <tab heading="GIFTS">
                 <div class="container">
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Cards</h3>
+                    <h3 class="bold">Cards</h3>
                       <span ng-repeat="item in responseJson.gifts.cards">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Activities</h3>
+                    <h3 class="bold">Activities</h3>
                       <span ng-repeat="item in responseJson.gifts.activities">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Things</h3>
+                    <h3 class="bold">Things</h3>
                       <span ng-repeat="item in responseJson.gifts.things">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Food</h3>
+                    <h3 class="bold">Food</h3>
                       <span ng-repeat="item in responseJson.gifts.food">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Wineries</h3>
+                    <h3 class="bold">Wineries</h3>
                       <span ng-repeat="item in responseJson.gifts.wineries">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Plants</h3>
+                    <h3 class="bold">Plants</h3>
                       <span ng-repeat="item in responseJson.gifts.plants">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Gift Certificates</h3>
+                    <h3 class="bold">Gift Certificates</h3>
                       <span ng-repeat="item in responseJson.gifts.gift_certificates">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Services</h3>
+                    <h3 class="bold">Services</h3>
                       <span ng-repeat="item in responseJson.gifts.services">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>
 
                   <div class="row">
                     <div class="col-sm-12 col-xs-12 col-md-12"></div>
-                    <h3>Perpetual</h3>
+                    <h3 class="bold">Perpetual</h3>
                       <span ng-repeat="item in responseJson.gifts.perpetual">
                         <div class="col-sm-4 col-xs-6 col-md-4 donate-thumb">
-                          <a href="{{item.url}}"><img src="{{item.path}}"/></a>
+                          <a href="{{item.url}}"><img class="img-responsive" src="{{item.path}}"/></a>
                         </div>
                       </span>
                   </div>

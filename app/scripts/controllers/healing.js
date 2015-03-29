@@ -33,6 +33,26 @@ angular.module('outpathsApp')
       $scope.sideBarToggle = true;
     };
     $scope.responseJson = {
+      image_quotes:[
+        {
+          image:'../images/emily.jpg',
+          title:'Emily Dickinson',
+          quote:'My life closed twice before its close; It yet remains to see If Immortality unveil A third event to me, ' +
+          'So huge, so hopeless to conceive, As these that twice befell. Parting is all we know of heaven, And all we need of hell.'
+        },
+        {
+          image:'../images/einstein.jpg',
+          title:'Albert Einstein',
+          quote: 'Man would indeed be in a poor way if he had to be restrained by fear of punishment and hope of reward after death.'
+        },
+        {
+          image:'../images/einstein.jpg',
+          title:'Thomas Paine',
+          quote:'I believe in one God, and no more; and' +
+          'I hope for happiness beyond this life. I believe in the equality of man; and I believe that religious ' +
+          'duties consist in doing justice, loving mercy, and endeavoring to make our fellow creatures happy.'
+        }
+      ],
       quotes:[
         {
           title:'On Death & Dying',

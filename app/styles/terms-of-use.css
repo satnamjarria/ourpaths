@@ -1,0 +1,16 @@
+.terms-page{
+  color:#fff;
+}
+.terms-page .title-img{
+  width: 70px;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+.terms-page .no-top-margin{
+  margin-top:0;
+}
+.terms-page p, .terms-page li {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
