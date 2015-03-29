@@ -75,8 +75,46 @@ body {
   color:#fff;
   background-color: transparent;
 }
-.glyphicon-family:before{
-  content: url(../images/family-icon1.png);
+
+.glyphicon-family:after{
+  content:'';
+  background: url(../images/family_icon.png);
+  background-size: contain;
+  height: 60px;
+  width: 60px;
+  display: block;
+  margin-top:-35px;
+  position: absolute;
+}
+.joy-icon:after{
+  content:'';
+  background:url(../images/joy_icon.png);
+  background-size: contain;
+  height: 60px;
+  width: 60px;
+  display: block;
+  margin-top:-15px;
+  position: absolute;
+}
+.lifepath-icon:after{
+  content:'';
+  background:url(../images/life_path_icon.png);
+  background-size: contain;
+  height: 60px;
+  width: 60px;
+  display: block;
+  margin-top:-15px;
+  position: absolute;
+}
+.personal-icon:after{
+  content:'';
+  background:url(../images/personal_icon.png);
+  background-size: contain;
+  height: 60px;
+  width: 60px;
+  display: block;
+  margin-top: -15px;
+  position: absolute;
 }
 /* Customize container */
 @media (min-width: 768px) {
@@ -207,7 +245,7 @@ body {
 }
 .section-title{
   font-size: 25px;
-  margin-left: 10px;
+  margin-left: 70px;
 }
 .toggle-btn{
   float:right;
@@ -487,10 +525,10 @@ form.dz-started .dz-default.dz-message{
 form.dz-started .dz-default.dz-message span{
   margin-left:2%;
 }
-form.dropzone.dz-started {
+/*form.dropzone.dz-started {
   border: 3px solid #fff !important;
   border-radius: 10px;
-}
+}*/
 .dropzone-row{
   overflow-x: auto;
   white-space: nowrap;
