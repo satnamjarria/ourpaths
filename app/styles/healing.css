@@ -21,6 +21,8 @@
   margin-left: auto;
   margin-right: auto;
   float:left;
+  left:0;
+  padding-top: 20px;
 }
 .healing-page .circle img{
   height: 50%;
@@ -92,6 +94,7 @@
   padding: 10px;
   font-weight: bold;
   font-size: 14px;
+  text-align:center;
 }
 .skip-links a{
   color:#fff;
@@ -118,4 +121,14 @@
 }
 .healing-page .tab li {
   letter-spacing: 0;
+}
+.healing-page .fixed{
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  z-index: 9999;
+  transition:top 2s ease 2s;
 }

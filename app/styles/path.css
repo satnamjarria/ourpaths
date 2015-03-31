@@ -76,14 +76,14 @@ body {
   background-color: transparent;
 }
 
-.glyphicon-family:after{
+.family-icon:after{
   content:'';
   background: url(../images/family_icon.png);
   background-size: contain;
   height: 60px;
   width: 60px;
   display: block;
-  margin-top:-35px;
+  margin-top:-15px;
   position: absolute;
 }
 .joy-icon:after{

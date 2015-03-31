@@ -21,6 +21,14 @@
             <div class="col-sm-3 col-xs-4 col-md-2 tab">
               <!-- start meditation tab -->
               <tab heading="MEDITATIONS">
+                <div class="row ">
+                  <div class="col-md-10 col-sm-10 skip-links" custom-on-scroll id="meditation_links">
+                    <strong>SKIP TO: <span class="glyphicon glyphicon-triangle-right"></span></strong>
+                    <a href="#helpingTheDying" du-smooth-scroll du-scrollspy>ON DEATH & DYING</a>
+                    <a href="#copingWithLoss" du-smooth-scroll du-scrollspy>ON HEAVEN</a>
+                    <a href="#movingFromPain" du-smooth-scroll du-scrollspy>ON GRIEVING</a>
+                  </div>
+                </div>
                 <br/><br/>
                 <div class="" ng-repeat="section in responseJson.image_quotes">
                   <div class="row">
@@ -65,7 +73,7 @@
               <!-- start living with death tab -->
               <tab heading="LIVING WITH DEATH">
                 <div class="row ">
-                  <div class="col-md-10 col-sm-10 skip-links">
+                  <div class="col-md-10 col-sm-10 skip-links" custom-on-scroll id="living_with_links">
                     <strong>SKIP TO: <span class="glyphicon glyphicon-triangle-right"></span></strong>
                     <a href="#helpingTheDying" du-smooth-scroll du-scrollspy>HELPING THE DYING</a>
                     <a href="#copingWithLoss" du-smooth-scroll du-scrollspy>COPING WITH THE LOSS OF A LOVED ONE</a>
@@ -764,7 +772,7 @@
               <!-- start practicalities tab -->
               <tab heading="PRACTICALITIES">
                 <div class="row">
-                  <div class="col-md-10 col-sm-10 skip-links">
+                  <div class="col-md-10 col-sm-10 skip-links" custom-on-scroll id="practicalities_links">
                     <strong>SKIP TO: <span class="glyphicon glyphicon-triangle-right"></span></strong>
                     <a href="#layingGroundwork" du-smooth-scroll du-scrollspy>LAYING THE GROUNDWORK</a>
                     <a href="#preparingEssentials" du-smooth-scroll du-scrollspy>PREPARING THE ESSENTIALS</a>
@@ -1294,7 +1302,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row" id="theEstate">
                   <div class="col-md-10 col-sm-10">
                     <h3 class="bold">The Estate</h3>
                     <p>

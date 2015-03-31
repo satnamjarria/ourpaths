@@ -14,6 +14,13 @@
 .view-page .accordion-toggle{
   outline:none;
 }
+.view-page .lifepath-icon:after,
+.view-page .family-icon:after,
+.view-page .personal-icon:after,
+.view-page .joy-icon:after{
+  margin-top:0;
+}
+
 .cover-row{
   background-color:#05abe0;
   width: 100%;
@@ -90,16 +97,15 @@
   color:#fff;
 }
 .circle{
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
   margin-bottom: 30px;
-  border:3px solid #fff;
-  padding-top:20px;
+  border:2px solid #fff;
+  padding-top:15px;
   text-align:center;
   margin-right: 10px;
   position:absolute;
-  left:0;
 }
 /*.section-heading{
   margin-top:40px;
@@ -304,9 +310,9 @@
     font-size:14px;
   }
   .circle{
-    width:70px;
-    height: 70px;
-    border-radius: 35px;
+    width:60px;
+    height: 60px;
+    border-radius: 30px;
     padding-top:15px;
   }
   .view-page .section-title{
