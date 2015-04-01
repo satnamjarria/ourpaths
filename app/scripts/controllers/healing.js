@@ -33,33 +33,15 @@ angular.module('outpathsApp')
       $scope.sideBarToggle = true;
     };
     $scope.responseJson = {
-      image_quotes:[
-        {
-          image:'../images/emily.jpg',
-          title:'Emily Dickinson',
-          quote:'My life closed twice before its close; It yet remains to see If Immortality unveil A third event to me, ' +
-          'So huge, so hopeless to conceive, As these that twice befell. Parting is all we know of heaven, And all we need of hell.'
-        },
-        {
-          image:'../images/einstein.jpg',
-          title:'Albert Einstein',
-          quote: 'Man would indeed be in a poor way if he had to be restrained by fear of punishment and hope of reward after death.'
-        },
-        {
-          image:'../images/einstein.jpg',
-          title:'Thomas Paine',
-          quote:'I believe in one God, and no more; and' +
-          'I hope for happiness beyond this life. I believe in the equality of man; and I believe that religious ' +
-          'duties consist in doing justice, loving mercy, and endeavoring to make our fellow creatures happy.'
-        }
-      ],
       quotes:[
         {
           title:'On Death & Dying',
+          id:'on-death',
           quotes:[
             {
               quote:'Death is nothing else but going home to God; the bond of love will be unbroken for all eternity.',
-              author:'Mother Theresa'
+              author:'Mother Theresa',
+              image:'../images/1-Mother-Theresa.JPG'
             },
             {
               quote:'You live on earth only for a few short years Which you call an incarnation, And then you leave your body as an outworn dress And go for refreshment to your true home in the spirit.',
@@ -71,11 +53,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'I wanted a perfect ending. Now I\'ve learned, the hard way, that some poems don\'t rhyme, and some stories don\'t have a clear beginning, middle, and end. Life is about not knowing, having to change, taking the moment and making the best of it, without knowing what\'s going to happen next. Delicious Ambiguity.',
-              author:'Gilda Radner'
+              author:'Gilda Radner',
+              image:'../images/gilda-radner.jpg'
             },
             {
               quote:'No one wants to die. Even people who want to go to heaven don\'t want to die to get there. And yet death is the destination we all share. No one has ever escaped it. And that is as it should be, because Death is very likely the single best invention of Life. It is Life\'s change agent. It clears out the old to make way for the new. Right now the new is you, but someday not too long from now, you will gradually become the old and be cleared away. Sorry to be so dramatic, but it is quite true.',
-              author:'Steve Jobs'
+              author:'Steve Jobs',
+              image:'../images/steve-jobs.jpg'
             },
             {
               quote:'Birth, life, and death — each took place on the hidden side of a leaf.',
@@ -83,11 +67,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'As a well spent day brings happy sleep, So life well used brings happy death.',
-              author:'Leonardo DaVinci'
+              author:'Leonardo DaVinci',
+              image:'../images/Leonardo_da_Vinci.png'
             },
             {
               quote:'Die when I may, I want it said of me by those who knew me best, that I always plucked a thistle and planted a flower where I thought a flower would grow.',
-              author:'Abraham Lincoln'
+              author:'Abraham Lincoln',
+              image:'../images/Abe_Lincoln.jpg'
             },
             {
               quote:'Because I have loved life, I shall have no sorrow to die.',
@@ -103,11 +89,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'I am a humanist, which means, in part, that I have tried to behave decently without any expectation of rewards or punishment after I\'m dead.',
-              author:'Kurt Vonnegut'
+              author:'Kurt Vonnegut',
+              image:'../images/Kurt_Vonnegut.jpg'
             },
             {
               quote:'There is but one freedom, To put oneself right with death. After that everything is possible. I cannot force you to believe in God. Believing in God amounts to coming to terms with death. When you have accepted death, the problem of God will be solved — and not the reverse.',
-              author:'Albert Camus'
+              author:'Albert Camus',
+              image:'../images/Albert_Camus.png'
             },
             {
               quote:'A brief candle; both ends burning An endless mile; a bus wheel turning A friend to share the lonesome times A handshake and a sip of wine So say it loud and let it ring We are all a part of everything The future, present and the past Fly on proud bird You\'re free at last.',
@@ -115,7 +103,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'On lifeâs journey faith is nourishment, virtuous deeds are a shelter, wisdom is the light by day and right mindfulness is the protection by night. If a man lives a pure life, nothing can destroy him.',
-              author:'Buddha'
+              author:'Buddha',
+              image:'../images/Buddha.JPG'
             },
             {
               quote:'Death? Why this fuss about death. Use your imagination; try to visualize a world without death! … Death is the essential condition of life, not an evil.',
@@ -135,15 +124,18 @@ angular.module('outpathsApp')
             },
             {
               quote:'We forget that we are all dead men conversing with dead men.',
-              author:'Jorge Luis Borges'
+              author:'Jorge Luis Borges',
+              image:'../images/JorgeLuisBorges.JPG'
             },
             {
               quote:'It is foolish and wrong to mourn the men who died. Rather we should thank God that such men lived.',
-              author:'Gen. George Patton'
+              author:'Gen. George Patton',
+              image:'../images/George-Patton.jpg'
             },
             {
               quote:'All but Death, can be Adjusted - Dynasties repaired Systems settled in their Sockets Citadels dissolved - Wastes of Lives - re-sown with Colors By Succeeding Springs Death – unto itself Exception Is exempt from Change -',
-              author:'Emily Dickinson'
+              author:'Emily Dickinson',
+              image:'../images/Emily-Dickinson.jpg'
             },
             {
               quote:'Thus that which is the most awful of evils, death, is nothing to us, since when we exist there is no death, and when there is death we do not exist.',
@@ -167,11 +159,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'Faith is taking the first step, even when you don\'t see the whole staircase.',
-              author:'Martin Luther King. Jr.'
+              author:'Martin Luther King. Jr.',
+              image:'../images/Martin_Luther_King.jpg'
             },
             {
               quote:'We forget that we are all dead men conversing with dead men.',
-              author:'Jorge Luis Borges'
+              author:'Jorge Luis Borges',
+              image:'../images/Jorge_Luis_Borges.jpg'
             },
             {
               quote:'Too many people are thinking of security instead of opportunity. They seem to be more afraid of life than death.',
@@ -183,7 +177,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'Let children walk with Nature, let them see the beautiful blendings and communions of death and life, their joyous inseparable unity, as taught in woods and meadows, plains and mountains and streams of our blessed star, and they will learn that death is stingless indeed, and as beautiful as life.',
-              author:'John Muir'
+              author:'John Muir',
+              image:'../images/John_Muir_Cane.JPG'
             },
             {
               quote:'Great is the art of beginning, but greater is the art of ending.',
@@ -191,7 +186,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'I do not fear death. I had been dead for billions and billions of years before I was born, and had not suffered the slightest inconvenience from it.',
-              author:'Mark Twain'
+              author:'Mark Twain',
+              image:'../images/Mark-Twain.jpg'
             },
             {
               quote:'If man hasn\'t discovered something that he will die for, he isn\'t fit to live.',
@@ -199,7 +195,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'To fear death Is nothing other than to think oneself wise when one is not. For it is to think one knows what one does not know. No one knows whether death may not even turn out to be The greatest blessings of human beings. And yet people fear it as if they knew for certain it is the greatest evil.',
-              author:'Socrates'
+              author:'Socrates',
+              image:'../images/Portrait_of_Socrates.jpg'
             },
             {
               quote:'Only those who have dared to let go Can dare to re-enter.',
@@ -207,7 +204,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'So live your life that the fear of death can never enter your heart. Trouble no one about their religion; respect others in their view, and demand that they respect yours. Love your life, perfect your life, beautify all things in your life. Seek to make your life long and its purpose in the service of your people. Prepare a noble death song for the day when you go over the great divide. Always give a word or a sign of salute when meeting or passing a friend, even a stranger, when in a lonely place. Show respect to all people and grovel to none. When you arise in the morning give thanks for the food and for the joy of living. If you see no reason for giving thanks, the fault lies only in yourself. Abuse no one and no thing, for abuse turns the wise ones to fools and robs the spirit of its vision. When it comes your time to die, be not like those whose hearts are filled with the fear of death, so that when their time comes they weep and pray for a little more time to live their lives over again in a different way. Sing your death song and die like a hero going home.',
-              author:' Chief Tecumseh (Crouching Tiger) Shawnee Nation'
+              author:' Chief Tecumseh (Crouching Tiger) Shawnee Nation',
+              image:'../images/Chief-Tecumseh.jpg'
             },
             {
               quote:'Normally we do not like to think about death. We would rather think about life. Why reflect on death? When you start preparing for death you soon realize That you must look into your life now… and come to face the truth of yourself. Death is like a mirror in which the true meaning of life is reflected.',
@@ -219,7 +217,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'And now the end is near And so I face the final curtain, My friends, I\'ll say it clear, I\'ll state my case of which I\'m certain. I\'ve lived a life that\'s full, I\'ve travelled each and every highway, And more, much more than this, I did it my way.',
-              author:'Paul Anka (Song "Did It My Way")'
+              author:'Paul Anka (Song "Did It My Way")',
+              image:'../images/Paul-Anka.jpg'
             },
             {
               quote:'Our life is an apprenticeship to the truth that around every circle another can be drawn; that there is no end in nature, but every end is a beginning, and under every deep a lower deep opens.',
@@ -231,11 +230,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'Death is one of two things… Either it is annihilation, and the dead have no consciousness of anything; Or, as we are told, it is really a change: A migration of the soul from one place to another.',
-              author:'Socrates'
+              author:'Socrates',
+              image:'../images/Portrait_of_Socrates.jpg'
             },
             {
               quote:'When we finally know we are dying, and all other sentient beings are dying with us, we start to have a burning, almost heartbreaking sense of the fragility and preciousness of each moment and each being, and from this can grow a deep, clear, limitless compassion for all beings.',
-              author:'Sogyal Rinpoche'
+              author:'Sogyal Rinpoche',
+              image:'../images/Sogyal-Rinpoche.jpg'
             },
             {
               quote:'Death – the last sleep? No, it is the final awakening.',
@@ -245,10 +246,12 @@ angular.module('outpathsApp')
         },
         {
           title:'On Heaven',
+          id:'on-heaven',
           quotes:[
             {
               quote:'I have always imagined that Heaven was a library.',
-              author:'Jorge Luis Borges'
+              author:'Jorge Luis Borges',
+              image:'../images/Jorge_Luis_Borges.jpg'
             },
             {
               quote:'My life closed twice before its close; It yet remains to see If Immortality unveil A third event to me, So huge, so hopeless to conceive, As these that twice befell. Parting is all we know of heaven, And all we need of hell.',
@@ -256,7 +259,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'Man would indeed be in a poor way if he had to be restrained by fear of punishment and hope of reward after death.',
-              author:'Albert Einstein'
+              author:'Albert Einstein',
+              image:'../images/albert-einstein.png'
             },
             {
               quote:'The only thing that burns in hell is the part of you that won\'t let go of your life. Your memories, your attachments. They burn them all away, but they are not punishing you, They are freeing your soul. If your are frightened of dying and you are holding on, You all see devils tearing your life away. If you have made your peace, Then the devils are really angels freeing you from the earth.',
@@ -264,7 +268,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'Go to Heaven for the climate, Hell for the company.',
-              author:'Mark Twain'
+              author:'Mark Twain',
+              image:'../images/Mark-Twain.jpg'
             },
             {
               quote:'Who has not found the heaven below? Will fail of it above. God\'s residence is next to mine, His furniture is love.',
@@ -272,7 +277,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'Who loves a garden still his Eden keeps, Perennial pleasures plants, and wholesome harvest reaps.',
-              author:'Amos Bronson Alcott'
+              author:'Amos Bronson Alcott',
+              image:'../images/Amos-Bronson-Alcott.jpg'
             },
             {
               quote:'Two things fill the mind with ever new and increasing wonder and awe — the starry heavens above me and the moral law within me.',
@@ -280,7 +286,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'The mind is its own place, and in itself, can make heaven of Hell, and a hell of Heaven.',
-              author:'John Milton'
+              author:'John Milton',
+              image:'../images/John_Milton.jpg'
             },
             {
               quote:'We are ignorant of the Beyond Because this ignorance is the condition of our own life. Just as ice cannot know fire except by melting and vanishing.',
@@ -288,7 +295,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'Live a good life. If there are gods and they are just, then they will not care how devout you have been, but will welcome you based on the virtues you have lived by. If there are gods, but unjust, then you should not want to worship them. If there are no gods, then you will be gone, but will have lived a noble life that will live on in the memories of your loved ones. I am not afraid.',
-              author:'Marcus Aurelius'
+              author:'Marcus Aurelius',
+              image:'../images/Marcus-Aurelius.jpg'
             },
             {
               quote:'I feel no need for any other faith than my faith in the kindness of human beings. I am so absorbed in the wonder of earth and the life upon it that I cannot think of heaven and angels.',
@@ -296,16 +304,19 @@ angular.module('outpathsApp')
             },
             {
               quote:'I believe in one God, and no more; and I hope for happiness beyond this life.I believe in the equality of man; and I believe that religious duties consist in doing justice, loving mercy, and endeavoring to make our fellow creatures happy',
-              author:'Thomas Paine'
+              author:'Thomas Paine',
+              image:'../images/Thomas-Paine.jpg'
             }
           ]
         },
         {
           title:'On Grieving',
+          id:'on-grieving',
           quotes:[
             {
               quote:'The bitterest tears shed over graves are for words left unsaid and deeds left undone.',
-              author:'Harriet Beecher Stowe'
+              author:'Harriet Beecher Stowe',
+              image:'../images/Beecher-Stowe.jpg'
             },
             {
               quote:'Down, down, down into the darkness of the grave Gently they go, the beautiful, the tender, the kind; Quietly they go the intelligent, the witty, the brave. I know. But I do not approve. And I am not resigned.',
@@ -313,11 +324,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'Look well into thyself; there is a source of strength which will always spring up if thou will always look there.',
-              author:'Marcus Aurelius'
+              author:'Marcus Aurelius',
+              image:'../images/Marcus-Aurelius.jpg'
             },
             {
               quote:'You\'re searching, Joe, for things that don\'t exist; I mean beginnings. Ends and beginnings — there are no such things. There are only middles.',
-              author:'Robert Frost'
+              author:'Robert Frost',
+              image:'../images/Robert_Frost.jpg'
             },
             {
               quote:'Do not be daunted by the enormity of the world\'s grief. Do justly, now. Love mercy, now. Walk humbly, now. You are not obligated to complete the work, but neither are you free to abandon it.',
@@ -325,11 +338,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'Every man can master a grief but he that hath it.',
-              author:'William Shakespeare'
+              author:'William Shakespeare',
+              image:'../images/Shakespeare.jpg'
             },
             {
               quote:'The pain passes, but the beauty remains.',
-              author:'Pierre August Renoir'
+              author:'Pierre August Renoir',
+              image:'../images/Pierre-Auguste_Renoir.jpg'
             },
             {
               quote:'It doesn\'t matter who my father was; it matters who I remember he was.',
@@ -341,7 +356,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'As only New Yorkers know, if you can get through the twilight, you\'ll live through the night.',
-              author:'Dorothy Parker'
+              author:'Dorothy Parker',
+              image:'../images/Young_Dorothy_Parker.jpg'
             },
             {
               quote:'He that conceals his grief finds no remedy for it.',
@@ -353,7 +369,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'The secret of health for both mind and body is not to mourn for the past, not to worry about the future, not to anticipate troubles, but to live in the present moment wisely and earnestly.',
-              author:'Buddha'
+              author:'Buddha',
+              image:'../images/Buddha.JPG'
             },
             {
               quote:'We have to believe that even the briefest of human connections can heal. Otherwise, life is unbearable.',
@@ -361,11 +378,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'There is neither happiness nor misery in the world; there is only the comparison of one state to another, nothing more. He who has felt the deepest grief is best able to experience supreme happiness. We must have felt what it is to die, that we may appreciate the enjoyments of life.',
-              author:'Alexandre Dumas'
+              author:'Alexandre Dumas',
+              image:'../images/Alexandre-Dumas.jpg'
             },
             {
               quote:'He, who has gone, So we but cherish his memory, abides with us, More potent, nay, more present than the living man.',
-              author:'Antoine de Saint-Exupery'
+              author:'Antoine de Saint-Exupery',
+              image:'../images/Saint-Exupery.jpg'
             },
             {
               quote:'For everything there is a season, And a time for every matter under heaven:  A time to be born and a time to die; A time to plant, and a time to pluck up what is planted; A time to kill and a time to heal; A time to break down and a time to build up; A time to weep, and a time to laugh; A time to mourn and a time to dance; A time to throw away stones and a time to gather stones together; A time to embrace, and a time to refrain from embracing; A time to seek and a time to lose; A time to keep, and a time to throw away; A time to tear, and a time to sew; A time to keep silence and a time to speak; A time to love, and a time to hate, A time for war, and a time for peace.',
@@ -377,7 +396,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'The excursion is the same when you go looking for your sorrow as when you go looking for your joy.',
-              author:'Eudora Welty'
+              author:'Eudora Welty',
+              image:'../images/Eudora-Welty.JPG'
             },
             {
               quote:'When we honestly ask ourselves which person in our lives means the most to us, we often find that it is those who, instead of giving much advice, solutions or cures, have chosen rather to share our pain and touch our wounds with a gentle and tender hand. The friend who can be silent with us in a moment of despair or confusion, who can stay with us in an hour of grief and bereavement, who can tolerate not knowing, not curing, not healing, and face with us the reality of our powerlessness, that is a friend who cares.',
@@ -389,11 +409,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'Action is the antidote to despair.',
-              author:'Joan Baez'
+              author:'Joan Baez',
+              image:'../images/Joan-Baez.jpg'
             },
             {
               quote:'Participate joyfully in the sorrows of the world. We cannot cure the world of sorrows, but we can choose to live in joy.',
-              author:'Joseph Campbell'
+              author:'Joseph Campbell',
+              image:'../images/Joseph_Campbell.png'
             },
             {
               quote:'We pass and leave you lying. No need for rhetoric, for funeral music, for melancholy bugle-calls. No need for tears now, no need for regret. We took our risk with you; you died and we live. We take your noble gift, salute for the last time those lines of pitiable crosses, those solitary mounds, those unknown graves, and turn to live our lives out as we may. Which of us were fortunate — who can tell? For you there is silence and cold twilight drooping in awful desolation over those motionless lands. For us sunlight and the sound of women\'s voices, song and hope and laughter, despair, gaiety, love — life. Lost terrible silent comrades, we, who might have died, salute you.',
@@ -401,11 +423,13 @@ angular.module('outpathsApp')
             },
             {
               quote:'In three words I can sum up everything I\'ve learned about life: it goes on.',
-              author:'Robert Frost'
+              author:'Robert Frost',
+              image:'../images/Robert_Frost.jpg'
             },
             {
               quote:'I love my past. I love my present. I\'m not ashamed of what I\'ve had, and I\'m not sad because I have it no longer.',
-              author:'Colette'
+              author:'Colette',
+              image:'../images/Colette.jpg'
             },
             {
               quote:'I believe that imagination is stronger than knowledge — myth is more potent than history — dreams are more powerful than facts — hope always triumphs over experience — laughter is the cure for grief — love is stronger than death.',
@@ -421,7 +445,8 @@ angular.module('outpathsApp')
             },
             {
               quote:'A man\'s dying is more the survivors\' affair than his own.',
-              author:'Thomas Mann'
+              author:'Thomas Mann',
+              image:'../images/Thomas_Mann.jpg'
             },
             {
               quote:'Grief is itself a medicine.',

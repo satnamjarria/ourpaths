@@ -24,38 +24,31 @@
                 <div class="row ">
                   <div class="col-md-10 col-sm-10 skip-links" custom-on-scroll id="meditation_links">
                     <strong>SKIP TO: <span class="glyphicon glyphicon-triangle-right"></span></strong>
-                    <a href="#helpingTheDying" du-smooth-scroll du-scrollspy>ON DEATH & DYING</a>
-                    <a href="#copingWithLoss" du-smooth-scroll du-scrollspy>ON HEAVEN</a>
-                    <a href="#movingFromPain" du-smooth-scroll du-scrollspy>ON GRIEVING</a>
+                    <a href="#on-death" du-smooth-scroll du-scrollspy>ON DEATH & DYING</a>
+                    <a href="#on-heaven" du-smooth-scroll du-scrollspy>ON HEAVEN</a>
+                    <a href="#on-grieving" du-smooth-scroll du-scrollspy>ON GRIEVING</a>
                   </div>
                 </div>
                 <br/><br/>
-                <div class="" ng-repeat="section in responseJson.image_quotes">
-                  <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                      <div class="heal-circle" ng-style="{'background':'url({{section.image}})'}">
 
-                      </div>
-                    </div>
-                  </div><!--end row--><br/>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 ">
-                      <p>{{section.quote}}</p>
-                      <br/>
-                      <span>- {{section.author}}</span>
-                    </div>
-                  </div><!--end row --><br/>
-                </div>
                 <!--Active Paths -->
                 <div class="" ng-repeat="section in responseJson.quotes">
                   <div class="row">
-                    <div class="col-md-10 col-sm-10">
+                    <div class="col-md-10 col-sm-10" id="{{section.id}}">
                       <h3 class="bold">{{section.title}}</h3>
                     </div>
                   </div><!--end row--><br/>
                   <div class="" ng-repeat="quote in section.quotes">
                     <div class="row">
+                      <div class="col-md-4 col-sm-4">
+                          <div class="heal-circle" ng-show="{{quote.image}}" ng-style="{'background':'url({{quote.image}})'}">
+
+                          </div>
+                      </div>
+                    </div><br/>
+                    <div class="row">
                       <div class="col-md-10 col-sm-10">
+
                         <p>{{quote.quote}}</p>
                         <p><i>- {{quote.author}}</i></p>
                       </div>
