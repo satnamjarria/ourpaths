@@ -41,7 +41,7 @@ angular.module('outpathsApp')
             {
               quote:'Death is nothing else but going home to God; the bond of love will be unbroken for all eternity.',
               author:'Mother Theresa',
-              image:'../images/1-Mother-Theresa.JPG'
+              image:'../images/Mother-Theresa.jpg'
             },
             {
               quote:'You live on earth only for a few short years Which you call an incarnation, And then you leave your body as an outworn dress And go for refreshment to your true home in the spirit.',
@@ -104,7 +104,7 @@ angular.module('outpathsApp')
             {
               quote:'On lifeâs journey faith is nourishment, virtuous deeds are a shelter, wisdom is the light by day and right mindfulness is the protection by night. If a man lives a pure life, nothing can destroy him.',
               author:'Buddha',
-              image:'../images/Buddha.JPG'
+              image:'../images/Buddha.jpg'
             },
             {
               quote:'Death? Why this fuss about death. Use your imagination; try to visualize a world without death! … Death is the essential condition of life, not an evil.',
@@ -125,7 +125,7 @@ angular.module('outpathsApp')
             {
               quote:'We forget that we are all dead men conversing with dead men.',
               author:'Jorge Luis Borges',
-              image:'../images/JorgeLuisBorges.JPG'
+              image:'../images/JorgeLuisBorges.jpg'
             },
             {
               quote:'It is foolish and wrong to mourn the men who died. Rather we should thank God that such men lived.',
@@ -178,7 +178,7 @@ angular.module('outpathsApp')
             {
               quote:'Let children walk with Nature, let them see the beautiful blendings and communions of death and life, their joyous inseparable unity, as taught in woods and meadows, plains and mountains and streams of our blessed star, and they will learn that death is stingless indeed, and as beautiful as life.',
               author:'John Muir',
-              image:'../images/John_Muir_Cane.JPG'
+              image:'../images/John_Muir_Cane.jpg'
             },
             {
               quote:'Great is the art of beginning, but greater is the art of ending.',
@@ -370,7 +370,7 @@ angular.module('outpathsApp')
             {
               quote:'The secret of health for both mind and body is not to mourn for the past, not to worry about the future, not to anticipate troubles, but to live in the present moment wisely and earnestly.',
               author:'Buddha',
-              image:'../images/Buddha.JPG'
+              image:'../images/Buddha.jpg'
             },
             {
               quote:'We have to believe that even the briefest of human connections can heal. Otherwise, life is unbearable.',
@@ -397,7 +397,7 @@ angular.module('outpathsApp')
             {
               quote:'The excursion is the same when you go looking for your sorrow as when you go looking for your joy.',
               author:'Eudora Welty',
-              image:'../images/Eudora-Welty.JPG'
+              image:'../images/Eudora-Welty.jpg'
             },
             {
               quote:'When we honestly ask ourselves which person in our lives means the most to us, we often find that it is those who, instead of giving much advice, solutions or cures, have chosen rather to share our pain and touch our wounds with a gentle and tender hand. The friend who can be silent with us in a moment of despair or confusion, who can stay with us in an hour of grief and bereavement, who can tolerate not knowing, not curing, not healing, and face with us the reality of our powerlessness, that is a friend who cares.',
