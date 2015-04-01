@@ -15,6 +15,7 @@ angular.module('outpathsApp')
 
     $scope.responseJson = {
       dashInfo:{
+        featured:2,
         recents:2,
         favorites:3,
         signatures:1234,
